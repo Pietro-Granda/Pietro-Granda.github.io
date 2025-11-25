@@ -1,0 +1,170 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do body e fontes */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333; /* cor neutra */
+    background-color: #f5f5f5; /* fundo neutro */
+}
+
+/* Container principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header do portfólio */
+header {
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Nome e título */
+header h1 {
+    font-size: 2.5rem;
+    color: #1a73e8; /* cor forte */
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Imagem do perfil */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px auto;
+    display: block;
+    border: 4px solid #1a73e8; /* borda em cor forte */
+}
+
+/* Seção Sobre */
+section {
+    padding: 50px 0;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #1a73e8;
+}
+
+section p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Contato */
+.contact {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #1a73e8;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact a:hover {
+    background-color: #155ab6;
+}
+
+/* Habilidades */
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #1a73e8;
+    width: 0;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* Projetos */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    color: #1a73e8;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Animar barras de habilidade quando carregar */
+.skills-animate .skill-level {
+    width: var(--skill-level);
+}

@@ -1,145 +1,120 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="it">
 <head>
-    <!-- Configurações básicas do documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pietro Granda Boscarato - Portfólio</title>
-
-    <!-- Google Fonts para estilo moderno -->
+    <title>Pietro Granda Boscarato - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Link para CSS externo -->
-    <link rel="stylesheet" href="Site.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Container principal -->
-    <div class="container">
-
-        <!-- Header com nome, título e imagem -->
-        <header>
-            <img src="https://via.placeholder.com/150" alt="Foto de Pietro" class="profile-pic">
+    <header class="header">
+        <div class="profile-container">
+            <img src="IMMAGINE.jpg" alt="Foto Profilo" class="profile-pic">
             <h1>Pietro Granda Boscarato</h1>
-            <p>Fullstack Developer | Student passionate about programming and new technologies</p>
-        </header>
+            <p>Sviluppatore Fullstack | Studente di Informatica</p>
 
-        <!-- Seção Sobre -->
-        <section id="about">
-            <h2>Sobre Mim</h2>
-            <p>Estou no 4º ano da escola de informática, gosto de programar e estou sempre buscando aprender novas tecnologias e melhorar minhas habilidades. Apaixonado por desenvolvimento web e software, procuro desafios que me permitam crescer como profissional.</p>
-        </section>
-
-        <!-- Seção Contato -->
-        <section id="contact">
-            <h2>Contato</h2>
-            <div class="contact">
-                <a href="mailto:boscaratopietro@gmail.com">Email</a>
-                <a href="#">LinkedIn (em breve)</a>
-                <a href="#">GitHub (em breve)</a>
-                <a href="#">Baixar CV (em breve)</a>
+            <div class="buttons">
+                <a class="btn" href="mailto:boscaratopietro@gmail.com">Email</a>
+                <a class="btn" href="https://www.linkedin.com/in/pietro-granda-boscarato-14bb42311?originalSubdomain=it" target="_blank">LinkedIn</a>
+                <a class="btn" href="https://github.com/Pietro-Granda/Pietro-Granda" target="_blank">GitHub</a>
             </div>
-        </section>
+        </div>
+    </header>
 
-        <!-- Seção Habilidades -->
-        <section id="skills">
-            <h2>Habilidades</h2>
-            <div class="skills skills-animate">
-                <div class="skill">
-                    <span class="skill-name">C</span>
-                    <div class="skill-bar"><div class="skill-level" style="--skill-level: 80%;"></div></div>
+    <section class="about">
+        <h2>Chi Sono</h2>
+        <p>Sono un giovane sviluppatore appassionato di programmazione. Studio informatica e sto costruendo i miei primi progetti reali in C, C++ e sviluppo web.</p>
+    </section>
+
+    <section class="skills">
+        <h2>Competenze</h2>
+        <div class="skill-list">
+            <a href="https://github.com/Pietro-Granda/Pietro-Granda/tree/main/C" target="_blank" class="skill">C</a>
+            <a href="https://github.com/Pietro-Granda/Pietro-Granda/tree/main/C%2B%2B" target="_blank" class="skill">C++</a>
+            <a href="https://github.com/Pietro-Granda/Pietro-Granda/tree/main/Java" target="_blank" class="skill">Java</a>
+            <div class="skill">HTML / CSS / JS</div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2>Progetti Principali</h2>
+
+        <!-- C -->
+        <div class="project-section">
+            <h3>C</h3>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h4>Anagrafe</h4>
+                    <p>Gestione di persone con funzioni di ricerca, inserimento e salvataggio.</p>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda/blob/main/C/Anagrafe.c" target="_blank">Vedi Codice</a>
                 </div>
-                <div class="skill">
-                    <span class="skill-name">C++</span>
-                    <div class="skill-bar"><div class="skill-level" style="--skill-level: 70%;"></div></div>
+                <div class="project-card">
+                    <h4>Tris</h4>
+                    <p>Gioco del Tris (Tic Tac Toe) sviluppato in linguaggio C.</p>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda/blob/main/C/Tris.c" target="_blank">Vedi Codice</a>
                 </div>
-                <div class="skill">
-                    <span class="skill-name">Java</span>
-                    <div class="skill-bar"><div class="skill-level" style="--skill-level: 75%;"></div></div>
-                </div>
-                <div class="skill">
-                    <span class="skill-name">HTML/CSS/JS</span>
-                    <div class="skill-bar"><div class="skill-level" style="--skill-level: 85%;"></div></div>
+                <div class="project-card">
+                    <h4>Calcolatrice con File</h4>
+                    <p>Calcolatrice che salva e legge i dati tramite file esterni.</p>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda/blob/main/C/calcolatrice2.c" target="_blank">Vedi Codice</a>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Seção Projetos -->
-<!-- Seção Projetos -->
-<section id="projects">
-    <h2>Projetos</h2>
+        <!-- C++ -->
+        <div class="project-section">
+            <h3>C++</h3>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h4>Somma di Due Numeri</h4>
+                    <p>Calcolo della somma di due numeri inseriti dall'utente.</p>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda/blob/main/C%2B%2B/Somma_due_num.cpp" target="_blank">Vedi Codice</a>
+                </div>
+                <div class="project-card">
+                    <h4>Contatti</h4>
+                    <p>Gestione di una lista di contatti con visualizzazione e modifica.</p>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda/blob/main/C%2B%2B/contatti.cpp" target="_blank">Vedi Codice</a>
+                </div>
+                <div class="project-card">
+                    <h4>Media Note</h4>
+                    <p>Calcolo della media dei voti degli studenti.</p>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda/blob/main/C%2B%2B/media_voti.cpp" target="_blank">Vedi Codice</a>
+                </div>
+                <div class="project-card">
+                    <h4>Numero Pari o Dispari</h4>
+                    <p>Controllo se un numero inserito è pari o dispari.</p>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda/blob/main/C%2B%2B/pari_dispari.cpp" target="_blank">Vedi Codice</a>
+                </div>
+            </div>
+        </div>
 
-    <!-- Projetos em C -->
-    <h3 style="text-align:center; margin-bottom:15px; color:#1a73e8;">Projetos em C</h3>
-    <div class="projects">
-        <div class="project-card">
-            <h4>Calculadora em C</h4>
-            <p>Uma calculadora simples que realiza operações básicas (em breve)</p>
+        <!-- Java -->
+        <div class="project-section">
+            <h3>Java</h3>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h4>Array</h4>
+                    <p>Esempio di utilizzo degli array in Java.</p>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda/blob/main/Java/ArrayEsempio.java" target="_blank">Vedi Codice</a>
+                </div>
+                <div class="project-card">
+                    <h4>Numero Intero</h4>
+                    <p>Gestione di numeri interi e operazioni base in Java.</p>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda/blob/main/Java/NumeroIntero.java" target="_blank">Vedi Codice</a>
+                </div>
+                <div class="project-card">
+                    <h4>Persona</h4>
+                    <p>Gestione di oggetti Persona con attributi e metodi in Java.</p>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda/blob/main/Java/Persona.java" target="_blank">Vedi Codice</a>
+                </div>
+            </div>
         </div>
-        <div class="project-card">
-            <h4>Jogo da Forca</h4>
-            <p>Implementação do clássico jogo da forca em console (em breve)</p>
-        </div>
-    </div>
 
-    <!-- Projetos em C++ -->
-    <h3 style="text-align:center; margin:40px 0 15px 0; color:#1a73e8;">Projetos em C++</h3>
-    <div class="projects">
-        <div class="project-card">
-            <h4>Gerenciador de Biblioteca</h4>
-            <p>Sistema de gerenciamento de livros e usuários (em breve)</p>
-        </div>
-        <div class="project-card">
-            <h4>Simulador de Banco</h4>
-            <p>Programa para simular transações bancárias básicas (em breve)</p>
-        </div>
-    </div>
+    </section>
 
-    <!-- Projetos em Java -->
-    <h3 style="text-align:center; margin:40px 0 15px 0; color:#1a73e8;">Projetos em Java</h3>
-    <div class="projects">
-        <div class="project-card">
-            <h4>Agenda de Contatos</h4>
-            <p>Aplicativo simples para armazenar e gerenciar contatos (em breve)</p>
-        </div>
-        <div class="project-card">
-            <h4>Jogo da Velha</h4>
-            <p>Implementação gráfica do jogo da velha usando Swing (em breve)</p>
-        </div>
-    </div>
-
-    <!-- Projetos em Web (HTML/CSS/JS) -->
-    <h3 style="text-align:center; margin:40px 0 15px 0; color:#1a73e8;">Projetos Web</h3>
-    <div class="projects">
-        <div class="project-card">
-            <h4>Portfólio Pessoal</h4>
-            <p>Meu portfólio online usando HTML, CSS e JS (em breve)</p>
-        </div>
-        <div class="project-card">
-            <h4>Jogo da Memória</h4>
-            <p>Jogo da memória interativo feito com JavaScript (em breve)</p>
-        </div>
-    </div>
-</section>
-
-
-    <!-- Footer -->
     <footer>
-        &copy; 2025 Pietro Granda Boscarato. Todos os direitos reservados.
+        <p>© 2025 Pietro Granda Boscarato - Tutti i diritti riservati</p>
     </footer>
-
-    <!-- Script para animar barras de habilidade -->
-    <script>
-        window.addEventListener('load', () => {
-            const skillLevels = document.querySelectorAll('.skill-level');
-            skillLevels.forEach(skill => {
-                // Animar a largura da barra de habilidade
-                const level = skill.style.getPropertyValue('--skill-level');
-                skill.style.width = level;
-            });
-        });
-    </script>
-
 </body>
 </html>
-

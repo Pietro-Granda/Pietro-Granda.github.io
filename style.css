@@ -105,13 +105,16 @@ section h2 {
 
 /* PROJECTS */
 .project-section {
-    margin-top: 80px; /* mais espaçamento entre linguagens */
+    margin-top: 80px;
+    /* mais espaçamento entre linguagens */
 }
 
 .project-section h3 {
-    color: white;
-    font-size: 2rem;       /* maior que antes */
-    margin-bottom: 30px;   /* separa título dos projetos */
+    color: #0077cc;
+    font-size: 2rem;
+    /* maior que antes */
+    margin-bottom: 30px;
+    /* separa título dos projetos */
     display: inline-block;
     padding-bottom: 8px;
 }
@@ -119,8 +122,10 @@ section h2 {
 /* GRID dos projetos */
 .project-grid {
     display: grid;
-    grid-template-columns: 1fr; /* vertical mobile */
-    gap: 30px; /* mais espaço entre os cards */
+    grid-template-columns: 1fr;
+    /* vertical mobile */
+    gap: 30px;
+    /* mais espaço entre os cards */
 }
 
 @media (min-width: 900px) {
@@ -134,7 +139,7 @@ section h2 {
     background: white;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
     text-align: center;
     min-height: 140px;
     display: flex;
@@ -143,9 +148,10 @@ section h2 {
 }
 
 .project-card h4 {
-    color: #ffffff;
+    color: #0077cc;
     margin-bottom: 10px;
-    font-size: 1.3rem; /* menor que nome da linguagem */
+    font-size: 1.3rem;
+    /* menor que nome da linguagem */
 }
 
 .project-card p {
@@ -168,6 +174,7 @@ section h2 {
 .project-btn:hover {
     background: #005fa3;
     transform: translateY(-2px);
+    box-shadow: 2px 2px 10px#005fa3;
 }
 
 /* FOOTER */
@@ -178,4 +185,3 @@ footer {
     color: white;
     margin-top: 30px;
 }
-

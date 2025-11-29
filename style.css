@@ -109,7 +109,7 @@ section h2 {
 }
 
 .project-section h3 {
-    color: white;
+    color: #1a73e8;
     font-size: 2rem;       /* maior que antes */
     margin-bottom: 30px;   /* separa título dos projetos */
     display: inline-block;
@@ -178,4 +178,3 @@ footer {
     color: white;
     margin-top: 30px;
 }
-

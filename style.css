@@ -18,7 +18,7 @@ body {
     background: linear-gradient(135deg, #1f1f1f, #333);
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 30px;
 }
 
 .profile-container {
@@ -187,4 +187,5 @@ footer {
     color: white;
     margin-top: 30px;
 }
+
 

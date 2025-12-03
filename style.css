@@ -153,25 +153,34 @@ section {
 }
 
 .project-section {
-    margin-top: 25px;
+    margin-top: 50px;          /* 🔹 mais espaço entre C / C++ / Java */
+    margin-bottom: 50px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+/* Títulos das linguagens (C, C++, Java) já estão aqui como h3 */
+.project-section h3 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+/* GRID DOS CARDS */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
-    justify-items: center;
+    justify-items: center;  /* centraliza os cards na linha */
 }
 
-/* 🔹 Cards com mesmo tamanho e tudo centralizado */
+/* 🔹 Cards com mesmo tamanho e simétricos */
 .project-card {
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-    width: 100%;
-    max-width: 280px;
-    height: 230px; /* todos com mesma altura */
+    width: 100%;           /* mesma largura dentro da coluna */
+    min-height: 230px;     /* mesma altura mínima -> retângulos iguais */
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* título + texto + botão */
@@ -251,6 +260,7 @@ body.dark .skill:hover {
     background: #444;
 }
 
+/* 🔹 cards escuros */
 body.dark .project-card {
     background: #1a1a1a;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
@@ -273,6 +283,18 @@ body.dark .project-btn:hover {
     box-shadow: 2px 2px 10px #55108c;
 }
 
+/* 🔹 borda entre as linguagens no dark mode */
+body.dark .project-section {
+    border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+/* 🔹 Títulos das linguagens (C, C++, Java) em roxo no dark mode */
+body.dark .project-section h3,
+body.dark .projects h2 {
+    color: #c49bff;
+}
+
+/* FOOTER DARK */
 body.dark footer {
     background: #000;
 }

@@ -56,7 +56,7 @@ body {
 }
 
 .btn:hover {
-    background: #1a73e8;
+    background: #1664c1;
     transform: translateY(-2px);
 }
 
@@ -116,38 +116,32 @@ section h2 {
     padding-bottom: 8px;
 }
 
-/* GRID dei progetti */
+/* GRID progetti */
 .project-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* mobile: 1 card per riga */
     gap: 30px;
 }
 
 @media (min-width: 900px) {
     .project-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* desktop: 2 card per riga */
     }
 }
 
-/* CARD del progetto */
+/* CARD progetto */
 .project-card {
     background: white;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
     text-align: center;
-    min-height: 160px; /* puoi aumentare se vuoi rettangoli più alti */
+    min-height: 160px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.2s, box-shadow 0.2s;
 }
-
-.project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
-}
-
 
 .project-card h4 {
     color: #0077cc;
@@ -175,7 +169,12 @@ section h2 {
 .project-btn:hover {
     background: #005fa3;
     transform: translateY(-2px);
-    box-shadow: 2px 2px 10px #005fa3;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* FOOTER */

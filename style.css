@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
@@ -37,7 +36,7 @@ body {
     border-radius: 50%;
 }
 
-/* BOTÕES */
+/* BOTTONI */
 .buttons {
     margin-top: 12px;
     display: flex;
@@ -61,7 +60,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* SEÇÕES */
+/* SEZIONI */
 section {
     padding: 40px 20px;
     max-width: 900px;
@@ -75,9 +74,32 @@ section h2 {
     font-size: 1.8rem;
 }
 
+/* SEZIONE CHI SONO */
 .about p {
     font-size: 1.05rem;
     line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 12px;
+}
+
+.about ul li {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    text-align: left;
+    position: relative;
+    padding-left: 25px;
+}
+
+.about ul li::before {
+    content: "👉";
+    position: absolute;
+    left: 0;
 }
 
 /* SKILLS */
@@ -101,32 +123,27 @@ section h2 {
 
 .skill:hover {
     background: #cfcfcf;
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.05);
 }
 
 /* PROJECTS */
 .project-section {
     margin-top: 80px;
-    /* mais espaçamento entre linguagens */
 }
 
 .project-section h3 {
     color: #0077cc;
     font-size: 2rem;
-    /* maior que antes */
     margin-bottom: 30px;
-    /* separa título dos projetos */
     display: inline-block;
     padding-bottom: 8px;
 }
 
-/* GRID dos projetos */
+/* GRID dei progetti */
 .project-grid {
     display: grid;
     grid-template-columns: 1fr;
-    /* vertical mobile */
     gap: 30px;
-    /* mais espaço entre os cards */
 }
 
 @media (min-width: 900px) {
@@ -135,7 +152,7 @@ section h2 {
     }
 }
 
-/* CARD do projeto */
+/* CARD del progetto */
 .project-card {
     background: white;
     padding: 25px;
@@ -150,10 +167,8 @@ section h2 {
 
 .project-card h4 {
     color: #0077cc;
-    color: #0077cc;
     margin-bottom: 10px;
     font-size: 1.3rem;
-    /* menor que nome da linguagem */
 }
 
 .project-card p {
@@ -170,13 +185,13 @@ section h2 {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 700;
-    transition: background 0.15s, transform 0.12s;
+    transition: all 0.25s ease;
 }
 
 .project-btn:hover {
     background: #005fa3;
     transform: translateY(-2px);
-    box-shadow: 2px 2px 10px#005fa3;
+    box-shadow: 2px 2px 10px #005fa3;
 }
 
 /* FOOTER */
@@ -187,25 +202,3 @@ footer {
     color: white;
     margin-top: 30px;
 }
-.about ul {
-    list-style: none; /* togli i bullet standard */
-    padding: 0;
-    margin-top: 12px;
-}
-
-.about ul li {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    margin-bottom: 8px;
-    text-align: left;
-    position: relative;
-    padding-left: 25px;
-}
-
-.about ul li::before {
-    content: "👉"; /* emoji come bullet */
-    position: absolute;
-    left: 0;
-}
-
-

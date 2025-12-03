@@ -187,5 +187,25 @@ footer {
     color: white;
     margin-top: 30px;
 }
+.about ul {
+    list-style: none; /* togli i bullet standard */
+    padding: 0;
+    margin-top: 12px;
+}
+
+.about ul li {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    text-align: left;
+    position: relative;
+    padding-left: 25px;
+}
+
+.about ul li::before {
+    content: "👉"; /* emoji come bullet */
+    position: absolute;
+    left: 0;
+}
 
 

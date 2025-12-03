@@ -1,21 +1,16 @@
-/* RESET GERAL */
+/* Reset e corpo */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
-/* BODY GERAL */
 body {
     font-family: 'Roboto', sans-serif;
     background: #f4f4f4;
     color: #333;
     overflow-x: hidden;
-    transition: background 0.3s, color 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 
 /* HEADER */
@@ -23,14 +18,13 @@ body {
     background: linear-gradient(135deg, #1f1f1f, #333);
     color: white;
     text-align: center;
-    padding: 60px 20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    padding: 50px 20px;
+    padding: 60px 30px;
 }
 
 .profile-container {
-    max-width: 700px;
+    max-width: 650px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,7 +38,7 @@ body {
     border-radius: 50%;
 }
 
-/* BOTÕES DO HEADER */
+/* BOTÕES */
 .buttons {
     margin-top: 12px;
     display: flex;
@@ -60,66 +54,33 @@ body {
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
-    transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
-    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
     border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
+    background: #1a73e8;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* SEÇÕES GERAIS */
+/* SEÇÕES */
 section {
-    padding: 50px 20px;
+    padding: 40px 20px;
     max-width: 900px;
-    width: 100%;
     margin: 0 auto;
     text-align: center;
 }
 
-.about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-.about-text,
-.likes {
-    width: 100%;
-    max-width: 750px;
-}
-
-/* TÍTULOS PRINCIPAIS */
-.about-text h2,
-.likes h2,
-.skills h2,
-.projects h2,
-.project-section h3 {
+section h2 {
     color: #1a73e8;
-    margin-bottom: 20px;
-    font-size: 2rem;
+    margin-bottom: 18px;
+    font-size: 1.8rem;
 }
 
-/* TEXTO SOBRE MIM */
-.about-text p {
+.about p {
     font-size: 1.05rem;
     line-height: 1.6;
-}
-
-/* LISTA DE "LIKES" */
-.likes ul {
-    list-style-type: disc;
-    list-style-position: inside;
-    padding-left: 0;
-}
-
-.likes ul li {
-    font-size: 1.05rem;
-    margin-bottom: 8px;
 }
 
 /* SKILLS */
@@ -128,7 +89,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
-    margin-top: 15px;
+    margin-top: 12px;
 }
 
 .skill {
@@ -136,89 +97,76 @@ section {
     background: #ddd;
     border-radius: 6px;
     font-weight: 700;
-    color: #333;
     text-decoration: none;
-    transition: background 0.15s, transform 0.12s, box-shadow 0.12s;
+    color: #333;
+    transition: background 0.15s, transform 0.12s;
 }
 
 .skill:hover {
     background: #cfcfcf;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* PROJETOS – BLOCO GERAL */
-.projects {
-    margin-top: 20px;
-}
-
-/* BLOCO DE CADA LINGUAGEM (C, C++, Java) */
+/* PROJECTS */
 .project-section {
-    margin-top: 50px;          /* espaço entre as linguagens */
-    margin-bottom: 50px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin-top: 80px; /* mais espaçamento entre linguagens */
 }
 
 .project-section h3 {
-    font-size: 1.7rem;
-    margin-bottom: 20px;
+    color: #0077cc;
+    font-size: 2rem;   /* maior que antes */
+    margin-bottom: 30px; /* separa título dos projetos */
+    display: inline-block;
+    padding-bottom: 8px;
 }
 
-/* GRID DOS CARDS – 2 POR LINHA */
+/* GRID dos projetos */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(220px, 1fr)); /* 2 colunas fixas */
-    gap: 22px;
-    justify-items: center;
+    grid-template-columns: 1fr; /* vertical mobile */
+    gap: 30px;                  /* mais espaço entre os cards */
 }
 
-/* CARDS DE PROJETO – MENORES E HARMÔNICOS */
+@media (min-width: 900px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 por linha no desktop */
+    }
+}
+
+/* CARD do projeto */
 .project-card {
     background: white;
-    padding: 25px;                 /* menos espaço interno */
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-    width: 100%;
-    min-height: 140px;             /* altura menor */
+    text-align: center;
+    min-height: 110px; /* 🔹 menor que antes (era 140px) */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    text-align: center;
-
-    /* animação suave e crescendo a partir do centro */
-    transform-origin: center center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* TÍTULO DO PROJETO – MAIOR */
 .project-card h4 {
     color: #0077cc;
     margin-bottom: 10px;
-    font-size: 1.3rem;       /* maior para destacar */
+    font-size: 1.3rem; /* menor que nome da linguagem */
 }
 
-/* DESCRIÇÃO DO PROJETO – MAIOR E LEGÍVEL */
 .project-card p {
     color: #444;
-    font-size: 1rem;          /* maior que o padrão */
-    line-height: 1.4;
-    margin-bottom: 6px;
+    font-size: 0.98rem;
 }
 
-/* BOTÃO DO PROJETO – UM POUCO MAIOR */
 .project-btn {
     display: inline-block;
-    margin-top: 8px;
+    margin-top: 12px;
     background: #0077cc;
     color: white;
-    padding: 9px 18px;
+    padding: 10px 14px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 0.95rem;       /* texto do botão maior */
-    transition: background 0.15s, transform 0.12s, box-shadow 0.12s;
+    transition: background 0.15s, transform 0.12s;
 }
 
 .project-btn:hover {
@@ -233,13 +181,13 @@ footer {
     padding: 18px 10px;
     background: #1f1f1f;
     color: white;
-    width: 100%;
     margin-top: 30px;
 }
 
 /* ===================== */
 /*       DARK MODE       */
 /* ===================== */
+
 body.dark {
     background: #111;
     color: #eee;
@@ -249,10 +197,16 @@ body.dark .header {
     background: linear-gradient(135deg, #222, #000);
 }
 
+/* botões em roxo no dark */
 body.dark .btn {
     background: #6a0dad;
 }
 
+body.dark .btn:hover {
+    background: #55108c;
+}
+
+/* skills escuras */
 body.dark .skill {
     background: #333;
     color: #eee;
@@ -262,10 +216,10 @@ body.dark .skill:hover {
     background: #444;
 }
 
-/* CARDS ESCUROS */
+/* cards de projeto escuros */
 body.dark .project-card {
     background: #1a1a1a;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
 }
 
 body.dark .project-card h4 {
@@ -276,6 +230,7 @@ body.dark .project-card p {
     color: #ddd;
 }
 
+/* botão do projeto em roxo */
 body.dark .project-btn {
     background: #6a0dad;
 }
@@ -285,33 +240,16 @@ body.dark .project-btn:hover {
     box-shadow: 2px 2px 10px #55108c;
 }
 
-/* BORDA ENTRE LINGUAGENS NO DARK MODE */
-body.dark .project-section {
-    border-top-color: rgba(255, 255, 255, 0.12);
-}
-
-/* NOMES DAS LINGUAGENS (C, C++, Java) EM ROXO #BF00FF NO DARK MODE */
+/* nomes das linguagens (C, C++, Java) em roxo #BF00FF no dark */
 body.dark .project-section h3 {
     color: #BF00FF;
 }
 
-/* FOOTER DARK */
-body.dark footer {
-    background: #000;
+body.dark .project-section h2 {
+    color: #BF00FF;
 }
 
-/* RESPONSIVO – 1 CARD POR LINHA NO CELULAR */
-@media (max-width: 600px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-text,
-    .likes {
-        padding: 0 10px;
-    }
-
-    .project-card {
-        max-width: 100%;
-    }
+/* footer escuro */
+body.dark footer {
+    background: #000;
 }

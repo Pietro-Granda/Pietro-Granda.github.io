@@ -1,6 +1,17 @@
 const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// estado inicial: se quiser começar claro, deixa sem 'dark'
+themeToggle.textContent = '🌙';
 
 themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-});
+    body.classList.toggle('dark');
 
+    if (body.classList.contains('dark')) {
+        // modo escuro ligado -> mostra sol
+        themeToggle.textContent = '☀️';
+    } else {
+        // modo claro -> mostra lua
+        themeToggle.textContent = '🌙';
+    }
+});

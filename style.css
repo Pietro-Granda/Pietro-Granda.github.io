@@ -168,7 +168,7 @@ section {
 /* GRID DOS CARDS – 2 POR LINHA */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(220px, 1fr)); /* 2 colunas */
+    grid-template-columns: repeat(2, minmax(220px, 1fr)); /* 2 colunas fixas */
     gap: 22px;
     justify-items: center;
 }
@@ -187,12 +187,16 @@ section {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
+
+    /* animação suave e crescendo a partir do centro */
+    transform-origin: center center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* HOVER – cresce pro lado e pra cima (texto e botão juntos) */
 .project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: scale(1.06);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
 }
 
 /* TÍTULO DO PROJETO – MAIOR */
@@ -291,10 +295,6 @@ body.dark .project-btn:hover {
 /* BORDA ENTRE LINGUAGENS NO DARK MODE */
 body.dark .project-section {
     border-top-color: rgba(255, 255, 255, 0.12);
-}
-
-body.dark .project-section h2 {
-    color: #BF00FF;
 }
 
 /* NOMES DAS LINGUAGENS (C, C++, Java) EM ROXO #BF00FF NO DARK MODE */

@@ -1,10 +1,11 @@
-/* Reset e corpo */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BODY GERAL */
 body {
     font-family: 'Roboto', sans-serif;
     background: #f4f4f4;
@@ -13,7 +14,8 @@ body {
     transition: background 0.3s, color 0.3s;
     display: flex;
     flex-direction: column;
-    align-items: center; /* centra tudo */
+    align-items: center;
+    text-align: center; /* centraliza textos por padrão */
 }
 
 /* HEADER */
@@ -24,13 +26,11 @@ body {
     padding: 60px 20px;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 .profile-container {
     max-width: 700px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,7 +44,7 @@ body {
     border-radius: 50%;
 }
 
-/* BOTÕES */
+/* BOTÕES DO HEADER */
 .buttons {
     margin-top: 12px;
     display: flex;
@@ -62,6 +62,7 @@ body {
     font-weight: bold;
     transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
     cursor: pointer;
+    border: none;
 }
 
 .btn:hover {
@@ -69,7 +70,7 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* SEÇÕES */
+/* SEÇÕES GERAIS */
 section {
     padding: 50px 20px;
     max-width: 900px;
@@ -83,17 +84,19 @@ section {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .about-text,
 .likes {
     width: 100%;
-    max-width: 700px; /* uniforma largura */
+    max-width: 750px;
 }
 
+/* TÍTULOS */
 .about-text h2,
 .likes h2,
+.skills h2,
 .projects h2,
 .project-section h3 {
     color: #1a73e8;
@@ -101,22 +104,22 @@ section {
     font-size: 2rem;
 }
 
-.about-text p,
-.likes ul li {
+/* TEXTO */
+.about-text p {
     font-size: 1.05rem;
     line-height: 1.6;
-    margin-bottom: 15px;
 }
 
-/* Lista de likes */
+/* LISTA DE "LIKES" CENTRALIZADA */
 .likes ul {
     list-style-type: disc;
-    padding-left: 20px;
-    text-align: left; /* importante pra alinhar bullet e texto */
+    list-style-position: inside;
+    padding-left: 0;
 }
 
 .likes ul li {
-    margin-bottom: 10px;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
 }
 
 /* SKILLS */
@@ -125,7 +128,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
-    margin-top: 12px;
+    margin-top: 15px;
 }
 
 .skill {
@@ -145,23 +148,35 @@ section {
 }
 
 /* PROJETOS */
+.projects {
+    margin-top: 20px;
+}
+
+.project-section {
+    margin-top: 25px;
+}
+
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
     justify-items: center;
 }
 
+/* 🔹 Cards com mesmo tamanho e tudo centralizado */
 .project-card {
     background: white;
-    padding: 25px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-    min-height: 180px; /* altura uniforme */
-    text-align: left;
+    width: 100%;
+    max-width: 280px;
+    height: 230px; /* todos com mesma altura */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; /* título + texto + botão */
+    align-items: center;
+    text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -173,21 +188,22 @@ section {
 .project-card h4 {
     color: #0077cc;
     margin-bottom: 10px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .project-card p {
     color: #444;
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-bottom: 10px;
 }
 
+/* BOTÃO DOS PROJETOS */
 .project-btn {
     display: inline-block;
-    margin-top: 12px;
+    margin-top: 8px;
     background: #0077cc;
     color: white;
-    padding: 10px 14px;
+    padding: 8px 14px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 700;
@@ -210,18 +226,29 @@ footer {
     margin-top: 30px;
 }
 
-/* DARK MODE */
+/* ===================== */
+/*       DARK MODE       */
+/* ===================== */
 body.dark {
     background: #111;
     color: #eee;
 }
 
 body.dark .header {
-    background: linear-gradient(135deg, #222, #111);
+    background: linear-gradient(135deg, #222, #000);
 }
 
 body.dark .btn {
     background: #6a0dad;
+}
+
+body.dark .skill {
+    background: #333;
+    color: #eee;
+}
+
+body.dark .skill:hover {
+    background: #444;
 }
 
 body.dark .project-card {
@@ -239,12 +266,15 @@ body.dark .project-card p {
 
 body.dark .project-btn {
     background: #6a0dad;
-    color: #fff;
 }
 
 body.dark .project-btn:hover {
     background: #55108c;
     box-shadow: 2px 2px 10px #55108c;
+}
+
+body.dark footer {
+    background: #000;
 }
 
 /* RESPONSIVO */
@@ -259,6 +289,6 @@ body.dark .project-btn:hover {
     }
 
     .project-card {
-        text-align: left;
+        max-width: 100%;
     }
 }

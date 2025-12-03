@@ -136,20 +136,18 @@ section h2 {
     border-radius: 10px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
     text-align: center;
-    min-height: 140px;
+    min-height: 160px; /* puoi aumentare se vuoi rettangoli più alti */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    /* ANIMAZIONE HOVER */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    will-change: transform, box-shadow;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .project-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
 }
+
 
 .project-card h4 {
     color: #0077cc;

@@ -11,6 +11,9 @@ body {
     color: #333;
     overflow-x: hidden;
     transition: background 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra tutto */
 }
 
 /* HEADER */
@@ -18,12 +21,16 @@ body {
     background: linear-gradient(135deg, #1f1f1f, #333);
     color: white;
     text-align: center;
-    padding: 60px 30px;
+    padding: 60px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-container {
-    max-width: 650px;
-    margin: auto;
+    max-width: 700px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +44,7 @@ body {
     border-radius: 50%;
 }
 
-/* BOTÕES */
+/* BOTTONI */
 .buttons {
     margin-top: 12px;
     display: flex;
@@ -63,7 +70,7 @@ body {
 
 /* SEZIONI */
 section {
-    padding: 40px 20px;
+    padding: 50px 20px;
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
@@ -72,8 +79,14 @@ section {
 .about-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 30px;
     margin-bottom: 50px;
+}
+
+.about-text, .likes {
+    width: 100%;
+    max-width: 700px; /* uniforma larghezza */
 }
 
 .about-text h2,
@@ -83,15 +96,23 @@ section {
     color: #1a73e8;
     margin-bottom: 20px;
     font-size: 2rem;
-    text-align: center;
 }
 
 .about-text p,
-.likes ul p {
+.likes ul li {
     font-size: 1.05rem;
     line-height: 1.6;
     text-align: center;
     margin-bottom: 15px;
+}
+
+.likes ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.likes ul li {
+    margin-bottom: 10px;
 }
 
 /* SKILLS */
@@ -131,8 +152,7 @@ section {
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    min-height: 140px;
+    min-height: 180px; /* altezza uniforme */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -179,6 +199,7 @@ footer {
     padding: 18px 10px;
     background: #1f1f1f;
     color: white;
+    width: 100%;
     margin-top: 30px;
 }
 
@@ -193,10 +214,20 @@ body.dark .header {
 }
 
 body.dark .btn {
-    background: #6a0dad; /* azul vira roxo no dark mode */
+    background: #6a0dad;
 }
 
 body.dark .project-card h4,
 body.dark .project-btn {
     background: #6a0dad;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-text, .likes {
+        padding: 0 10px;
+    }
 }

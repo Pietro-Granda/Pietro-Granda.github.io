@@ -193,12 +193,6 @@ section {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* HOVER – cresce pro lado e pra cima (texto e botão juntos) */
-.project-card:hover {
-    transform: scale(1.06);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
-}
-
 /* TÍTULO DO PROJETO – MAIOR */
 .project-card h4 {
     color: #0077cc;

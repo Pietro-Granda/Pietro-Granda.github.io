@@ -155,7 +155,7 @@ section {
     min-height: 180px; /* altezza uniforme */
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
 }
 

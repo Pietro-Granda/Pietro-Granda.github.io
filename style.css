@@ -74,32 +74,9 @@ section h2 {
     font-size: 1.8rem;
 }
 
-/* SEZIONE CHI SONO */
 .about p {
     font-size: 1.05rem;
     line-height: 1.6;
-    margin-bottom: 12px;
-}
-
-.about ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 12px;
-}
-
-.about ul li {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    margin-bottom: 8px;
-    text-align: left;
-    position: relative;
-    padding-left: 25px;
-}
-
-.about ul li::before {
-    content: "👉";
-    position: absolute;
-    left: 0;
 }
 
 /* SKILLS */
@@ -123,7 +100,7 @@ section h2 {
 
 .skill:hover {
     background: #cfcfcf;
-    transform: translateY(-2px) scale(1.05);
+    transform: translateY(-2px);
 }
 
 /* PROJECTS */
@@ -146,18 +123,17 @@ section h2 {
     gap: 30px;
 }
 
-@media (min-width: 900px) {
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.project-grid:only-child,
+.project-grid > :only-child {
+    justify-items: center;
 }
 
-/* CARD del progetto */
+/* CARD progetto */
 .project-card {
     background: white;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
     text-align: center;
     min-height: 140px;
     display: flex;
@@ -185,7 +161,7 @@ section h2 {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 700;
-    transition: all 0.25s ease;
+    transition: background 0.15s, transform 0.12s;
 }
 
 .project-btn:hover {
@@ -201,4 +177,39 @@ footer {
     background: #1f1f1f;
     color: white;
     margin-top: 30px;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 600px) {
+    .btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    .skill {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    .project-card {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .header {
+        padding: 50px 20px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-section h3 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
 }

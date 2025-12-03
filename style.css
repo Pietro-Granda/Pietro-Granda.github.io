@@ -176,12 +176,12 @@ section {
 /* CARDS DE PROJETO – MENORES E HARMÔNICOS */
 .project-card {
     background: white;
-    padding: 14px;                 /* menos espaço interno */
+    padding: 25px;                 /* menos espaço interno */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
     width: 100%;
     max-width: 260px;              /* impede ficar muito largo */
-    min-height: 170px;             /* altura menor */
+    min-height: 140px;             /* altura menor */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -202,8 +202,8 @@ section {
 /* TÍTULO DO PROJETO – MAIOR */
 .project-card h4 {
     color: #0077cc;
-    margin-bottom: 6px;
-    font-size: 1.25rem;       /* maior para destacar */
+    margin-bottom: 10px;
+    font-size: 1.3rem;       /* maior para destacar */
 }
 
 /* DESCRIÇÃO DO PROJETO – MAIOR E LEGÍVEL */

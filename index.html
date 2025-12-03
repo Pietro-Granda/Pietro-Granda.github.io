@@ -6,26 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pietro Granda Boscarato - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
-    <script src="/js/theme.js"></script>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header class="header">
         <div class="profile-container">
-            <img src="/img/foto.jpeg" alt="Foto Profilo" class="profile-pic">
+            <img src="img/foto.jpeg" alt="Foto Profilo" class="profile-pic">
             <h1>Pietro Granda Boscarato</h1>
             <p>Sviluppatore Fullstack | Studente di Informatica</p>
 
             <div class="buttons">
                 <a class="btn" href="mailto:boscaratopietro@gmail.com">Email</a>
-                <a class="btn"
-                    href="https://www.linkedin.com/in/pietro-granda-boscarato-14bb42311?originalSubdomain=it"
+                <a class="btn" href="https://www.linkedin.com/in/pietro-granda-boscarato-14bb42311?originalSubdomain=it"
                     target="_blank">LinkedIn</a>
                 <a class="btn" href="https://github.com/pietro-granda" target="_blank">GitHub</a>
-                <a class="btn" href="/cv/CV.html">CV</a>
-                <button id="theme-toggle" class="btn">🌙 / ☀️</button>
+                <a class="btn" href="cv/CV.html">CV</a>
+                <button class="btn" id="theme-toggle">🌙 / ☀️</button>
             </div>
         </div>
     </header>
@@ -37,6 +34,7 @@
             Attualmente sto approfondendo C, C++, Java e lo sviluppo web (HTML, CSS e JavaScript), con l’obiettivo di diventare uno sviluppatore full-stack.
             Amo lavorare in team, affrontare nuove sfide e migliorare le mie capacità tecniche e comunicative. Sono particolarmente interessato all’intelligenza artificiale, allo sviluppo di videogiochi e alla creazione di applicazioni semplici e intuitive.</p>
         </div>
+
         <div class="likes">
             <h2>Cose che mi piacciono fare</h2>
             <ul>
@@ -49,6 +47,15 @@
         </div>
     </section>
 
+    <section class="skills">
+        <h2>Competenze</h2>
+        <div class="skill-list">
+            <a href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/tree/main/C" target="_blank" class="skill">C</a>
+            <a href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/tree/main/C%2B%2B" target="_blank" class="skill">C++</a>
+            <a href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/tree/main/Java" target="_blank" class="skill">Java</a>
+            <div class="skill">HTML / CSS / JS</div>
+        </div>
+    </section>
 
     <section class="projects">
         <h2>Progetti Principali</h2>
@@ -60,23 +67,17 @@
                 <div class="project-card">
                     <h4>Anagrafe</h4>
                     <p>Gestione di persone con funzioni di ricerca, inserimento e salvataggio.</p>
-                    <a class="project-btn"
-                        href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/Anagrafe.c"
-                        target="_blank">Vedi Codice</a>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/Anagrafe.c" target="_blank">Vedi Codice</a>
                 </div>
                 <div class="project-card">
                     <h4>Tris</h4>
                     <p>Gioco del Tris sviluppato in linguaggio C.</p>
-                    <a class="project-btn"
-                        href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/Tris.c"
-                        target="_blank">Vedi Codice</a>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/Tris.c" target="_blank">Vedi Codice</a>
                 </div>
                 <div class="project-card">
                     <h4>Calcolatrice con File</h4>
                     <p>Calcolatrice che salva e legge i dati tramite file esterni.</p>
-                    <a class="project-btn"
-                        href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/calcolatrice2.c"
-                        target="_blank">Vedi Codice</a>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/calcolatrice2.c" target="_blank">Vedi Codice</a>
                 </div>
             </div>
         </div>
@@ -88,30 +89,22 @@
                 <div class="project-card">
                     <h4>Somma di Due Numeri</h4>
                     <p>Calcolo della somma di due numeri inseriti dall'utente.</p>
-                    <a class="project-btn"
-                        href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/Somma_due_num.cpp"
-                        target="_blank">Vedi Codice</a>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/Somma_due_num.cpp" target="_blank">Vedi Codice</a>
                 </div>
                 <div class="project-card">
                     <h4>Contatti</h4>
                     <p>Gestione di una lista di contatti con visualizzazione e modifica.</p>
-                    <a class="project-btn"
-                        href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/contatti.cpp"
-                        target="_blank">Vedi Codice</a>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/contatti.cpp" target="_blank">Vedi Codice</a>
                 </div>
                 <div class="project-card">
                     <h4>Media Note</h4>
                     <p>Calcolo della media dei voti degli studenti.</p>
-                    <a class="project-btn"
-                        href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/media_voti.cpp"
-                        target="_blank">Vedi Codice</a>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/media_voti.cpp" target="_blank">Vedi Codice</a>
                 </div>
                 <div class="project-card">
                     <h4>Numero Pari o Dispari</h4>
                     <p>Controllo se un numero inserito è pari o dispari.</p>
-                    <a class="project-btn"
-                        href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/pari_dispari.cpp"
-                        target="_blank">Vedi Codice</a>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/pari_dispari.cpp" target="_blank">Vedi Codice</a>
                 </div>
             </div>
         </div>
@@ -123,23 +116,17 @@
                 <div class="project-card">
                     <h4>Array</h4>
                     <p>Esempio di utilizzo degli array in Java.</p>
-                    <a class="project-btn"
-                        href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/ArrayEsempio.java"
-                        target="_blank">Vedi Codice</a>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/ArrayEsempio.java" target="_blank">Vedi Codice</a>
                 </div>
                 <div class="project-card">
                     <h4>Numero Intero</h4>
                     <p>Gestione di numeri interi e operazioni base in Java.</p>
-                    <a class="project-btn"
-                        href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/NumeroIntero.java"
-                        target="_blank">Vedi Codice</a>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/NumeroIntero.java" target="_blank">Vedi Codice</a>
                 </div>
                 <div class="project-card">
                     <h4>Persona</h4>
                     <p>Gestione di oggetti Persona con attributi e metodi in Java.</p>
-                    <a class="project-btn"
-                        href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/Persona.java"
-                        target="_blank">Vedi Codice</a>
+                    <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/Persona.java" target="_blank">Vedi Codice</a>
                 </div>
             </div>
         </div>
@@ -149,6 +136,8 @@
     <footer>
         <p>© 2025 Pietro Granda Boscarato - Tutti i diritti riservati</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -123,22 +123,32 @@ section h2 {
     gap: 30px;
 }
 
-.project-grid:only-child,
-.project-grid > :only-child {
-    justify-items: center;
+@media (min-width: 900px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-/* CARD progetto */
+/* CARD del progetto */
 .project-card {
     background: white;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
     text-align: center;
     min-height: 140px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    /* ANIMAZIONE HOVER */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
+}
+
+.project-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
 }
 
 .project-card h4 {
@@ -177,39 +187,4 @@ footer {
     background: #1f1f1f;
     color: white;
     margin-top: 30px;
-}
-
-/* --- MOBILE RESPONSIVE --- */
-@media (max-width: 600px) {
-    .btn {
-        padding: 12px 20px;
-        font-size: 1rem;
-    }
-
-    .skill {
-        padding: 12px 20px;
-        font-size: 1rem;
-    }
-
-    .project-card {
-        padding: 20px;
-        font-size: 1rem;
-    }
-
-    .header {
-        padding: 50px 20px;
-    }
-
-    section {
-        padding: 30px 15px;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-    }
-
-    .project-section h3 {
-        font-size: 1.6rem;
-        margin-bottom: 20px;
-    }
 }

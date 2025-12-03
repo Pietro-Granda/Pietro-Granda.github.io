@@ -63,18 +63,38 @@ body {
 /* SEZIONI */
 section {
     padding: 40px 20px;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
 }
 
-section h2 {
+/* Chi sono e Cose che mi piacciono fare */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.likes {
+    flex: 1;
+    background: #eaeaea;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about h2,
+.likes h2 {
     color: #1a73e8;
     margin-bottom: 18px;
     font-size: 1.8rem;
 }
 
-.about p {
+.about p,
+.likes ul {
     font-size: 1.05rem;
     line-height: 1.6;
 }
@@ -105,7 +125,7 @@ section h2 {
 
 /* PROJECTS */
 .project-section {
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 .project-section h3 {
@@ -116,16 +136,21 @@ section h2 {
     padding-bottom: 8px;
 }
 
-/* GRID progetti */
+/* GRID progetti 2x2 desktop */
 .project-grid {
     display: grid;
-    grid-template-columns: 1fr; /* mobile: 1 card per riga */
+    grid-template-columns: 1fr;
     gap: 30px;
 }
 
 @media (min-width: 900px) {
+    .about-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
     .project-grid {
-        grid-template-columns: repeat(2, 1fr); /* desktop: 2 card per riga */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

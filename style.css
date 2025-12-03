@@ -1,4 +1,4 @@
-/* RESET */
+/* RESET GERAL */
 * {
     margin: 0;
     padding: 0;
@@ -93,7 +93,7 @@ section {
     max-width: 750px;
 }
 
-/* TÍTULOS */
+/* TÍTULOS PRINCIPAIS */
 .about-text h2,
 .likes h2,
 .skills h2,
@@ -104,13 +104,13 @@ section {
     font-size: 2rem;
 }
 
-/* TEXTO */
+/* TEXTO SOBRE MIM */
 .about-text p {
     font-size: 1.05rem;
     line-height: 1.6;
 }
 
-/* LISTA DE "LIKES" CENTRALIZADA */
+/* LISTA DE "LIKES" */
 .likes ul {
     list-style-type: disc;
     list-style-position: inside;
@@ -147,13 +147,14 @@ section {
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* PROJETOS */
+/* PROJETOS – BLOCO GERAL */
 .projects {
     margin-top: 20px;
 }
 
+/* BLOCO DE CADA LINGUAGEM (C, C++, Java) */
 .project-section {
-    margin-top: 50px;          /* mais espaço entre C / C++ / Java */
+    margin-top: 50px;          /* espaço entre as linguagens */
     margin-bottom: 50px;
     padding-top: 15px;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
@@ -164,22 +165,23 @@ section {
     margin-bottom: 20px;
 }
 
-/* GRID DOS CARDS – 2 por linha */
+/* GRID DOS CARDS – 2 POR LINHA */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(260px, 1fr)); /* 2 colunas */
-    gap: 25px;
+    grid-template-columns: repeat(2, minmax(220px, 1fr)); /* 2 colunas */
+    gap: 22px;
     justify-items: center;
 }
 
-/* Cards com mesmo tamanho e simétricos */
+/* CARDS DE PROJETO – MENORES E HARMÔNICOS */
 .project-card {
     background: white;
-    padding: 16px;
+    padding: 14px;                 /* menos espaço interno */
     border-radius: 10px;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-    width: 100%;           
-    min-height: 190px;      /* altura padrão */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 260px;              /* impede ficar muito largo */
+    min-height: 170px;             /* altura menor */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -189,32 +191,36 @@ section {
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* TÍTULO DO PROJETO – MAIOR */
 .project-card h4 {
     color: #0077cc;
-    margin-bottom: 10px;
-    font-size: 1.5rem;
+    margin-bottom: 6px;
+    font-size: 1.25rem;       /* maior para destacar */
 }
 
+/* DESCRIÇÃO DO PROJETO – MAIOR E LEGÍVEL */
 .project-card p {
     color: #444;
-    font-size: 1.00rem;
-    margin-bottom: 10px;
+    font-size: 1rem;          /* maior que o padrão */
+    line-height: 1.4;
+    margin-bottom: 6px;
 }
 
-/* BOTÃO DOS PROJETOS */
+/* BOTÃO DO PROJETO – UM POUCO MAIOR */
 .project-btn {
     display: inline-block;
     margin-top: 8px;
     background: #0077cc;
     color: white;
-    padding: 8px 14px;
+    padding: 9px 18px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 700;
+    font-size: 0.95rem;       /* texto do botão maior */
     transition: background 0.15s, transform 0.12s, box-shadow 0.12s;
 }
 
@@ -259,10 +265,10 @@ body.dark .skill:hover {
     background: #444;
 }
 
-/* cards escuros */
+/* CARDS ESCUROS */
 body.dark .project-card {
     background: #1a1a1a;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 body.dark .project-card h4 {
@@ -282,17 +288,17 @@ body.dark .project-btn:hover {
     box-shadow: 2px 2px 10px #55108c;
 }
 
-/* borda entre as linguagens no dark mode */
+/* BORDA ENTRE LINGUAGENS NO DARK MODE */
 body.dark .project-section {
     border-top-color: rgba(255, 255, 255, 0.12);
 }
 
-/*  nomes das linguagens (C, C++, Java) em roxo #BF00FF no dark mode */
-body.dark .project-section h3 {
+body.dark .project-section h2 {
     color: #BF00FF;
 }
 
-body.dark .project-section h2 {
+/* NOMES DAS LINGUAGENS (C, C++, Java) EM ROXO #BF00FF NO DARK MODE */
+body.dark .project-section h3 {
     color: #BF00FF;
 }
 
@@ -301,7 +307,7 @@ body.dark footer {
     background: #000;
 }
 
-/* RESPONSIVO – 1 card por linha no celular */
+/* RESPONSIVO – 1 CARD POR LINHA NO CELULAR */
 @media (max-width: 600px) {
     .project-grid {
         grid-template-columns: 1fr;

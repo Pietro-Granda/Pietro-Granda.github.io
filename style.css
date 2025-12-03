@@ -13,7 +13,7 @@ body {
     transition: background 0.3s, color 0.3s;
     display: flex;
     flex-direction: column;
-    align-items: center; /* centra tutto */
+    align-items: center; /* centra tudo */
 }
 
 /* HEADER */
@@ -44,7 +44,7 @@ body {
     border-radius: 50%;
 }
 
-/* BOTTONI */
+/* BOTÕES */
 .buttons {
     margin-top: 12px;
     display: flex;
@@ -60,18 +60,20 @@ body {
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
-    transition: background 0.2s, transform 0.15s;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
     cursor: pointer;
 }
 
 .btn:hover {
     transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* SEZIONI */
+/* SEÇÕES */
 section {
     padding: 50px 20px;
     max-width: 900px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
 }
@@ -84,9 +86,10 @@ section {
     margin-bottom: 50px;
 }
 
-.about-text, .likes {
+.about-text,
+.likes {
     width: 100%;
-    max-width: 700px; /* uniforma larghezza */
+    max-width: 700px; /* uniforma largura */
 }
 
 .about-text h2,
@@ -102,13 +105,14 @@ section {
 .likes ul li {
     font-size: 1.05rem;
     line-height: 1.6;
-    text-align: center;
     margin-bottom: 15px;
 }
 
+/* Lista de likes */
 .likes ul {
     list-style-type: disc;
     padding-left: 20px;
+    text-align: left; /* importante pra alinhar bullet e texto */
 }
 
 .likes ul li {
@@ -131,15 +135,16 @@ section {
     font-weight: 700;
     color: #333;
     text-decoration: none;
-    transition: background 0.15s, transform 0.12s;
+    transition: background 0.15s, transform 0.12s, box-shadow 0.12s;
 }
 
 .skill:hover {
     background: #cfcfcf;
     transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* PROGETTI */
+/* PROJETOS */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -152,11 +157,12 @@ section {
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-    min-height: 180px; /* altezza uniforme */
-    text-align: center;
+    min-height: 180px; /* altura uniforme */
+    text-align: left;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .project-card:hover {
@@ -173,6 +179,7 @@ section {
 .project-card p {
     color: #444;
     font-size: 1rem;
+    margin-bottom: 10px;
 }
 
 .project-btn {
@@ -184,7 +191,7 @@ section {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 700;
-    transition: background 0.15s, transform 0.12s;
+    transition: background 0.15s, transform 0.12s, box-shadow 0.12s;
 }
 
 .project-btn:hover {
@@ -217,17 +224,41 @@ body.dark .btn {
     background: #6a0dad;
 }
 
-body.dark .project-card h4,
-body.dark .project-btn {
-    background: #6a0dad;
+body.dark .project-card {
+    background: #1a1a1a;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
 }
 
-/* RESPONSIVE */
+body.dark .project-card h4 {
+    color: #c49bff;
+}
+
+body.dark .project-card p {
+    color: #ddd;
+}
+
+body.dark .project-btn {
+    background: #6a0dad;
+    color: #fff;
+}
+
+body.dark .project-btn:hover {
+    background: #55108c;
+    box-shadow: 2px 2px 10px #55108c;
+}
+
+/* RESPONSIVO */
 @media (max-width: 600px) {
     .project-grid {
         grid-template-columns: 1fr;
     }
-    .about-text, .likes {
+
+    .about-text,
+    .likes {
         padding: 0 10px;
+    }
+
+    .project-card {
+        text-align: left;
     }
 }

@@ -287,8 +287,12 @@ body.dark .project-section {
     border-top-color: rgba(255, 255, 255, 0.12);
 }
 
-/* 🔹 nomes das linguagens (C, C++, Java) em roxo #BF00FF no dark mode */
+/*  nomes das linguagens (C, C++, Java) em roxo #BF00FF no dark mode */
 body.dark .project-section h3 {
+    color: #BF00FF;
+}
+
+body.dark .project-section h2 {
     color: #BF00FF;
 }
 

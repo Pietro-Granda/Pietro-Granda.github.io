@@ -282,11 +282,12 @@ body.dark .header {
 
 /* botões em roxo no dark */
 body.dark .btn {
-    background: #6a0dad;
+    background: #F000FF;
 }
 
 body.dark .btn:hover {
-    background: #55108c;
+    background: #F000FF;
+    box-shadow: 0 4px 10px rgba(240, 0, 255, 0.4);
 }
 
 /* nav links no dark */
@@ -319,23 +320,22 @@ body.dark .project-card p {
     color: #ddd;
 }
 
-body.dark .project-title-link {
-    color: #c49bff;
-}
-
 /* botão do projeto em roxo */
 body.dark .project-btn {
-    background: #6a0dad;
+    background: #F000FF;
 }
 
 body.dark .project-btn:hover {
-    background: #55108c;
-    box-shadow: 2px 2px 10px #55108c;
+    background: #F000FF;
+    box-shadow: 2px 2px 10px #F000FF;
 }
 
-/* nomes das linguagens (C, C++, Java) em roxo #BF00FF no dark */
-body.dark .project-section h3 {
-    color: #BF00FF;
+/* NOMES DAS LINGUAGENS (C, C++, Java) + títulos + links em roxo no dark */
+body.dark .project-section h3,
+body.dark section h2,
+body.dark .contact a,
+body.dark .project-title-link {
+    color: #F000FF;
 }
 
 /* footer escuro */

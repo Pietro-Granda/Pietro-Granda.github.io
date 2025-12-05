@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pietro Granda Boscarato - Portfolio</title>
+    <title>Pietro Granda Boscarato – Portfolio Sviluppatore</title>
 
-    <!-- Favicon (coloca um arquivo img/favicon.png na pasta do projeto) -->
+    <!-- SEO -->
+    <meta name="description" content="Portfolio di Pietro Granda Boscarato, studente di informatica appassionato di C, C++ e Java. Progetti, percorso e contatti.">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Pietro Granda Boscarato – Portfolio">
+    <meta property="og:description" content="Studente di informatica e sviluppatore in formazione. Scopri i miei progetti in C, C++ e Java.">
+    <meta property="og:type" content="website">
+    <!-- Troca pela URL real quando publicar -->
+    <meta property="og:url" content="https://seu-dominio-aqui.com/">
+    <meta property="og:image" content="https://seu-dominio-aqui.com/img/foto.jpeg">
+
+    <!-- Favicon (opcional, cria esse arquivo depois) -->
     <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <!-- Analytics (substitui o domínio depois, se quiser usar) -->
+    <!--
+    <script defer data-domain="seu-dominio-aqui.com" src="https://plausible.io/js/script.js"></script>
+    -->
 
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -17,20 +33,33 @@
 <body>
     <header class="header">
         <div class="profile-container">
-            <img src="img/foto.jpeg" alt="Foto Profilo" class="profile-pic">
+            <img src="img/foto.jpeg" alt="Foto profilo di Pietro" class="profile-pic">
             <h1>Pietro Granda Boscarato</h1>
-            <p class="subtitle">Studente di Informatica & Sviluppatore in formazione</p>
+
+            <p class="subtitle">
+                Studente di Informatica che ama programmare in C, C++ e Java
+            </p>
+
             <p class="tagline">
-                Mi piace scrivere codice chiaro, capire come funzionano le cose “sotto il cofano” e costruire progetti reali con C, C++ e Java.
+                Oggi so già usare questi linguaggi per creare piccoli progetti funzionanti, ma il mio obiettivo è imparare 
+                il più possibile e crescere passo dopo passo, scrivendo codice sempre più chiaro e organizzato.
             </p>
 
             <!-- Navegação interna -->
             <nav class="nav-links">
                 <a href="#about" class="nav-link">Chi sono</a>
                 <a href="#skills" class="nav-link">Competenze</a>
+                <a href="#learning" class="nav-link">Cosa studio</a>
                 <a href="#projects" class="nav-link">Progetti</a>
                 <a href="#contact" class="nav-link">Contatti</a>
             </nav>
+
+            <!-- Switch de idioma -->
+            <div class="lang-switch">
+                <span class="lang-active">IT</span>
+                <span>·</span>
+                <a href="index-en.html" class="lang-link">EN</a>
+            </div>
 
             <!-- Botões principais -->
             <div class="buttons">
@@ -47,13 +76,11 @@
         <h2>Chi sono</h2>
         <p>
             Sono uno studente di informatica con una forte passione per la programmazione e per la risoluzione dei problemi tramite il codice.
-            Al momento sto approfondendo C, C++ e Java, insieme alle basi dello sviluppo web (HTML, CSS e JavaScript).
-            Mi piace capire le basi (strutture dati, gestione della memoria, input/output da file) e applicarle in piccoli progetti pratici.
+            Mi piace capire cosa succede “dietro le quinte” di un programma: strutture dati, gestione della memoria, input/output da file.
         </p>
         <p>
-            Cerco sempre di scrivere codice leggibile e organizzato, commentare le parti più importanti e migliorare la qualità dei miei programmi 
-            man mano che imparo nuove tecniche. Mi interessa in particolare l’intelligenza artificiale, lo sviluppo di videogiochi e la creazione 
-            di applicazioni semplici ma utili per la vita di tutti i giorni.
+            Al momento lavoro soprattutto con C, C++ e Java. Non mi considero ancora un esperto, ma so già scrivere programmi 
+            funzionanti e leggibili, e voglio continuare ad imparare il più possibile, costruendo progetti reali che mi aiutino a crescere.
         </p>
     </section>
 
@@ -62,13 +89,87 @@
     <section id="skills" class="skills">
         <h2>Competenze</h2>
         <p>
-            Alcuni dei linguaggi e delle tecnologie con cui sto lavorando e imparando:
+            Queste sono le tecnologie che uso oggi. Sto ancora imparando, ma so già creare programmi completi 
+            e sto lavorando per migliorare ogni giorno.
         </p>
+
+        <!-- Badges -->
         <div class="skill-list">
-            <a href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/tree/main/C" target="_blank" class="skill">C</a>
-            <a href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/tree/main/C%2B%2B" target="_blank" class="skill">C++</a>
-            <a href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/tree/main/Java" target="_blank" class="skill">Java</a>
-            <div class="skill">HTML / CSS / JavaScript</div>
+            <div class="skill">C</div>
+            <div class="skill">C++</div>
+            <div class="skill">Java</div>
+            <div class="skill">HTML / CSS / JavaScript (basi)</div>
+        </div>
+
+        <!-- Barras de nível simples -->
+        <div class="skill-levels">
+            <div class="skill-level">
+                <span>C</span>
+                <div class="skill-bar">
+                    <div class="skill-fill c"></div>
+                </div>
+            </div>
+            <div class="skill-level">
+                <span>C++</span>
+                <div class="skill-bar">
+                    <div class="skill-fill cpp"></div>
+                </div>
+            </div>
+            <div class="skill-level">
+                <span>Java</span>
+                <div class="skill-bar">
+                    <div class="skill-fill java"></div>
+                </div>
+            </div>
+            <div class="skill-level">
+                <span>HTML / CSS / JS</span>
+                <div class="skill-bar">
+                    <div class="skill-fill web"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Cosa sto studiando adesso + Prossimi passi -->
+    <section id="learning" class="learning-wrapper">
+        <div class="learning-now">
+            <h2>Cosa sto studiando adesso</h2>
+            <p>In questo periodo mi sto concentrando su:</p>
+            <ul>
+                <li>Migliorare l’uso di puntatori e struct in C</li>
+                <li>Capire meglio classi, oggetti e costruttori in C++ e Java</li>
+                <li>Prendere sicurezza con HTML e CSS per creare interfacce semplici</li>
+            </ul>
+        </div>
+
+        <div class="next-steps">
+            <h2>Prossimi passi</h2>
+            <p>Nei prossimi mesi vorrei:</p>
+            <ul>
+                <li>Imparare le basi di Python e dei database</li>
+                <li>Creare un piccolo progetto web full-stack (front-end + back-end)</li>
+                <li>Approfondire algoritmi e strutture dati più avanzate</li>
+            </ul>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Strumenti che uso -->
+    <section class="tools">
+        <h2>Strumenti che uso</h2>
+        <p>
+            Alcuni degli strumenti con cui mi trovo meglio quando programmo:
+        </p>
+        <div class="tool-list">
+            <div class="tool-item">VS Code</div>
+            <div class="tool-item">Git &amp; GitHub</div>
+            <div class="tool-item">GCC / G++</div>
+            <div class="tool-item">Java (JDK)</div>
+            <div class="tool-item">Terminale (bash/cmd)</div>
+            <div class="tool-item">Browser DevTools</div>
         </div>
     </section>
 
@@ -87,10 +188,15 @@
                             Anagrafe
                         </a>
                     </h4>
+                    <img src="img/projects/anagrafe.png" alt="Screenshot del programma Anagrafe" class="project-image">
                     <p>
-                        Programma in C per gestire un’anagrafe di persone usando <strong>struct</strong>, funzioni di ricerca, inserimento
-                        e salvataggio su <strong>file di testo</strong>.
+                        Programma in C per gestire un’anagrafe di persone.
                     </p>
+                    <ul class="project-tech-list">
+                        <li>Uso di <strong>struct</strong> per rappresentare le persone</li>
+                        <li>Funzioni per inserire, cercare e visualizzare dati</li>
+                        <li>Lettura e scrittura su <strong>file di testo</strong></li>
+                    </ul>
                     <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/Anagrafe.c" target="_blank">
                         Vedi codice
                     </a>
@@ -102,10 +208,15 @@
                             Tris
                         </a>
                     </h4>
+                    <img src="img/projects/tris.png" alt="Screenshot del gioco Tris" class="project-image">
                     <p>
-                        Implementazione del gioco del Tris con una <strong>matrice 3x3</strong>, controllo delle combinazioni vincenti
-                        e gestione del turno dei giocatori.
+                        Implementazione del gioco del Tris in C.
                     </p>
+                    <ul class="project-tech-list">
+                        <li>Gestione di una <strong>matrice 3x3</strong></li>
+                        <li>Controllo delle combinazioni vincenti</li>
+                        <li>Gestione del turno dei giocatori</li>
+                    </ul>
                     <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/Tris.c" target="_blank">
                         Vedi codice
                     </a>
@@ -117,10 +228,15 @@
                             Calcolatrice con file
                         </a>
                     </h4>
+                    <img src="img/projects/calcolatrice.png" alt="Screenshot della calcolatrice in C" class="project-image">
                     <p>
-                        Calcolatrice in C che legge e scrive i risultati su <strong>file esterni</strong>, usando operazioni base
-                        e gestione dell’input utente.
+                        Calcolatrice che salva e legge risultati da file.
                     </p>
+                    <ul class="project-tech-list">
+                        <li>Operazioni aritmetiche di base</li>
+                        <li>Lettura e scrittura su file</li>
+                        <li>Gestione dell’input utente</li>
+                    </ul>
                     <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/calcolatrice2.c" target="_blank">
                         Vedi codice
                     </a>
@@ -138,10 +254,15 @@
                             Somma di due numeri
                         </a>
                     </h4>
+                    <img src="img/projects/somma.png" alt="Screenshot programma Somma due numeri" class="project-image">
                     <p>
-                        Esercizio base in C++ per la lettura di input da tastiera e il calcolo della somma, utile per consolidare
-                        input/output con <strong>cin/cout</strong>.
+                        Programma base per sommare due numeri.
                     </p>
+                    <ul class="project-tech-list">
+                        <li>Uso di <strong>cin</strong> e <strong>cout</strong></li>
+                        <li>Gestione dell’input utente</li>
+                        <li>Operazioni aritmetiche semplici</li>
+                    </ul>
                     <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/Somma_due_num.cpp" target="_blank">
                         Vedi codice
                     </a>
@@ -153,10 +274,15 @@
                             Contatti
                         </a>
                     </h4>
+                    <img src="img/projects/contatti.png" alt="Screenshot programma Contatti" class="project-image">
                     <p>
-                        Gestione di una rubrica contatti con funzioni per visualizzare e modificare i dati, lavorando su <strong>array</strong>
-                        e strutture di dati semplici.
+                        Rubrica contatti in C++.
                     </p>
+                    <ul class="project-tech-list">
+                        <li>Gestione di una lista di contatti</li>
+                        <li>Uso di array e cicli</li>
+                        <li>Visualizzazione e modifica dei dati</li>
+                    </ul>
                     <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/contatti.cpp" target="_blank">
                         Vedi codice
                     </a>
@@ -168,10 +294,15 @@
                             Media voti
                         </a>
                     </h4>
+                    <img src="img/projects/media.png" alt="Screenshot programma Media voti" class="project-image">
                     <p>
-                        Programma che calcola la media dei voti degli studenti, praticando <strong>cicli</strong>, <strong>array</strong>
-                        e operazioni matematiche di base.
+                        Calcolo della media dei voti degli studenti.
                     </p>
+                    <ul class="project-tech-list">
+                        <li>Uso di array per memorizzare voti</li>
+                        <li>Cicli per sommare e calcolare la media</li>
+                        <li>Gestione di input multipli</li>
+                    </ul>
                     <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/media_voti.cpp" target="_blank">
                         Vedi codice
                     </a>
@@ -183,10 +314,15 @@
                             Numero pari o dispari
                         </a>
                     </h4>
+                    <img src="img/projects/pari-dispari.png" alt="Screenshot programma Pari o dispari" class="project-image">
                     <p>
-                        Programma che verifica se un numero è pari o dispari usando l’operatore <strong>modulo (%)</strong>, 
-                        utile per consolidare condizioni e strutture <strong>if</strong>.
+                        Programma che controlla se un numero è pari o dispari.
                     </p>
+                    <ul class="project-tech-list">
+                        <li>Uso dell’operatore <strong>modulo (%)</strong></li>
+                        <li>Strutture condizionali <strong>if/else</strong></li>
+                        <li>Gestione input numerico</li>
+                    </ul>
                     <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/pari_dispari.cpp" target="_blank">
                         Vedi codice
                     </a>
@@ -204,9 +340,15 @@
                             Array
                         </a>
                     </h4>
+                    <img src="img/projects/java-array.png" alt="Screenshot programma Array Java" class="project-image">
                     <p>
-                        Esempio di gestione di <strong>array</strong> in Java, con cicli per scorrere gli elementi e stampare i valori.
+                        Esempio di gestione di array in Java.
                     </p>
+                    <ul class="project-tech-list">
+                        <li>Uso di array e cicli <strong>for</strong></li>
+                        <li>Accesso e stampa degli elementi</li>
+                        <li>Basi della sintassi Java</li>
+                    </ul>
                     <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/ArrayEsempio.java" target="_blank">
                         Vedi codice
                     </a>
@@ -218,9 +360,15 @@
                             Numero intero
                         </a>
                     </h4>
+                    <img src="img/projects/numero-intero.png" alt="Screenshot classe NumeroIntero" class="project-image">
                     <p>
-                        Classe Java per rappresentare un numero intero con metodi per leggere, stampare e manipolare il valore.
+                        Classe Java per rappresentare un numero intero.
                     </p>
+                    <ul class="project-tech-list">
+                        <li>Definizione di una classe con attributi</li>
+                        <li>Metodi per leggere e modificare il valore</li>
+                        <li>Introduzione all’<strong>OOP</strong> in Java</li>
+                    </ul>
                     <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/NumeroIntero.java" target="_blank">
                         Vedi codice
                     </a>
@@ -232,10 +380,15 @@
                             Persona
                         </a>
                     </h4>
+                    <img src="img/projects/persona.png" alt="Screenshot classe Persona" class="project-image">
                     <p>
-                        Classe <strong>Persona</strong> con attributi (nome, età, ecc.) e metodi, per esercitarsi con 
-                        <strong>incapsulamento</strong> e oggetti in Java.
+                        Classe Persona con attributi e metodi.
                     </p>
+                    <ul class="project-tech-list">
+                        <li>Incapsulamento di dati (nome, età, ecc.)</li>
+                        <li>Metodi per leggere e modificare i campi</li>
+                        <li>Uso degli oggetti in Java</li>
+                    </ul>
                     <a class="project-btn" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/Persona.java" target="_blank">
                         Vedi codice
                     </a>
@@ -253,7 +406,24 @@
         <p><strong>Email:</strong> <a href="mailto:boscaratopietro@gmail.com">boscaratopietro@gmail.com</a></p>
         <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pietro-granda-boscarato-14bb42311?originalSubdomain=it" target="_blank">Profilo LinkedIn</a></p>
         <p><strong>GitHub:</strong> <a href="https://github.com/pietro-granda" target="_blank">github.com/pietro-granda</a></p>
+
+        <!-- Mini formulário de contato (front-end) -->
+        <form class="contact-form" action="#" method="post">
+            <div class="form-row">
+                <input type="text" name="name" placeholder="Il tuo nome" required>
+            </div>
+            <div class="form-row">
+                <input type="email" name="email" placeholder="La tua email" required>
+            </div>
+            <div class="form-row">
+                <textarea name="message" rows="4" placeholder="Il tuo messaggio" required></textarea>
+            </div>
+            <button type="submit" class="btn form-btn">Invia</button>
+        </form>
     </section>
+
+    <!-- Botão voltar ao topo -->
+    <button class="back-to-top" id="backToTop">↑</button>
 
     <footer>
         <p>© 2025 Pietro Granda Boscarato - Tutti i diritti riservati</p>

@@ -8,7 +8,6 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
@@ -56,7 +55,6 @@ body {
 
 /* NAV INTERNA */
 .nav-links {
-    color: #fdfdfd;
     margin-top: 12px;
     display: flex;
     flex-wrap: wrap;
@@ -69,12 +67,35 @@ body {
     text-decoration: none;
     font-size: 0.95rem;
     opacity: 0.85;
-    /* removido border-bottom pra não ter linha */
     transition: opacity 0.15s;
 }
 
 .nav-link:hover {
     opacity: 1;
+}
+
+/* Switch de idioma */
+.lang-switch {
+    margin-top: 6px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.lang-link {
+    color: #fdfdfd;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.lang-link:hover {
+    opacity: 1;
+}
+
+.lang-active {
+    font-weight: 700;
 }
 
 /* BOTÕES */
@@ -104,7 +125,7 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Remover underline de todos os links por padrão */
+/* remover underline de todos os links */
 a {
     text-decoration: none;
 }
@@ -152,7 +173,6 @@ section h2 {
     background: #ddd;
     border-radius: 6px;
     font-weight: 700;
-    text-decoration: none;
     color: #333;
     transition: background 0.15s, transform 0.12s, box-shadow 0.12s;
 }
@@ -163,13 +183,106 @@ section h2 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
+/* Barras de skill */
+.skill-levels {
+    margin-top: 22px;
+}
+
+.skill-level {
+    width: 100%;
+    max-width: 400px;
+    margin: 8px auto;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.skill-level span {
+    display: inline-block;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    border-radius: 999px;
+    background: #ddd;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: #1a73e8;
+}
+
+/* níveis */
+.skill-fill.c      { width: 70%; }
+.skill-fill.cpp    { width: 60%; }
+.skill-fill.java   { width: 55%; }
+.skill-fill.web    { width: 40%; }
+
+/* Cosa sto studiando + Prossimi passi */
+.learning-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.learning-now,
+.next-steps {
+    flex: 1 1 280px;
+    max-width: 420px;
+    text-align: left;
+}
+
+.learning-now p,
+.next-steps p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.learning-now ul,
+.next-steps ul {
+    list-style: disc;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.learning-now li,
+.next-steps li {
+    margin-bottom: 6px;
+    font-size: 0.98rem;
+}
+
+/* Strumenti */
+.tools p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.tool-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tool-item {
+    padding: 8px 14px;
+    background: #eee;
+    border-radius: 999px;
+    font-size: 0.9rem;
+}
+
 /* PROJECTS */
 .projects {
     margin-top: 20px;
 }
 
 .project-section {
-    margin-top: 50px; /* mais espaçamento entre linguagens */
+    margin-top: 50px;
 }
 
 .project-section h3 {
@@ -183,14 +296,14 @@ section h2 {
 /* GRID dos projetos */
 .project-grid {
     display: grid;
-    grid-template-columns: 1fr; /* mobile: 1 por linha */
+    grid-template-columns: 1fr;
     gap: 30px;
     justify-items: center;
 }
 
 @media (min-width: 900px) {
     .project-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 por linha no desktop */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -201,42 +314,63 @@ section h2 {
     border-radius: 10px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
     text-align: center;
-    min-height: 110px; /* quadrado menor */
+    min-height: 110px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transform-origin: center center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+}
+
+/* imagem do projeto */
+.project-image {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin: 6px auto 10px;
+    border-radius: 6px;
+    object-fit: cover;
 }
 
 /* título do projeto */
 .project-card h4 {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-size: 1.3rem;
 }
 
-/* link no título */
 .project-title-link {
     color: #0077cc;
-    text-decoration: none; /* sem linha */
 }
 
-.project-title-link:hover {
-    text-decoration: none; /* continua sem linha no hover */
-}
-
+/* descrição + lista técnica */
 .project-card p {
     color: #444;
     font-size: 0.98rem;
+    margin-bottom: 6px;
+}
+
+.project-tech-list {
+    list-style: disc;
+    text-align: left;
+    margin: 0 auto 8px;
+    max-width: 260px;
+    padding-left: 18px;
+    font-size: 0.92rem;
 }
 
 /* BOTÃO do projeto */
 .project-btn {
     display: inline-block;
-    margin-top: 12px;
+    margin-top: 8px;
     background: #0077cc;
     color: white;
     padding: 10px 14px;
     border-radius: 8px;
-    text-decoration: none;
     font-weight: 700;
     transition: background 0.15s, transform 0.12s, box-shadow 0.12s;
 }
@@ -255,11 +389,33 @@ section h2 {
 
 .contact a {
     color: #1a73e8;
-    text-decoration: none; /* sem underline */
 }
 
-.contact a:hover {
-    text-decoration: none; /* continua sem underline */
+/* Formulário de contato */
+.contact-form {
+    margin-top: 18px;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-row {
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.form-btn {
+    margin-top: 4px;
+    width: 100%;
 }
 
 /* FOOTER */
@@ -269,6 +425,47 @@ footer {
     background: #1f1f1f;
     color: white;
     margin-top: 30px;
+}
+
+/* Botão voltar ao topo */
+.back-to-top {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: #1a73e8;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    z-index: 10;
+}
+
+.back-to-top.show {
+    display: flex;
+}
+
+/* Página 404 */
+.not-found {
+    padding: 60px 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.not-found h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.not-found p {
+    margin-bottom: 10px;
 }
 
 /* ===================== */
@@ -285,11 +482,13 @@ body.dark .header {
 }
 
 /* botões em roxo no dark */
-body.dark .btn {
+body.dark .btn,
+body.dark .form-btn {
     background: #F000FF;
 }
 
-body.dark .btn:hover {
+body.dark .btn:hover,
+body.dark .form-btn:hover {
     background: #F000FF;
     box-shadow: 0 4px 10px rgba(240, 0, 255, 0.4);
 }
@@ -314,13 +513,27 @@ body.dark .skill:hover {
     background: #444;
 }
 
+/* barras de skill no dark */
+body.dark .skill-bar {
+    background: #333;
+}
+body.dark .skill-fill {
+    background: #F000FF;
+}
+
+/* ferramentas no dark */
+body.dark .tool-item {
+    background: #222;
+}
+
 /* cards de projeto escuros */
 body.dark .project-card {
     background: #1a1a1a;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
 }
 
-body.dark .project-card p {
+body.dark .project-card p,
+body.dark .project-tech-list {
     color: #ddd;
 }
 
@@ -339,7 +552,7 @@ body.dark .project-btn:hover {
     box-shadow: 2px 2px 10px #F000FF;
 }
 
-/* NOMES DAS LINGUAGENS (C, C++, Java) + títulos + links em roxo no dark */
+/* nomes das linguagens + títulos + links em roxo no dark */
 body.dark .project-section h3,
 body.dark section h2,
 body.dark .contact a {
@@ -349,4 +562,44 @@ body.dark .contact a {
 /* footer escuro */
 body.dark footer {
     background: #000;
+}
+
+/* Botão voltar ao topo no dark */
+body.dark .back-to-top {
+    background: #F000FF;
+}
+
+/* RESPONSIVO – mobile */
+@media (max-width: 600px) {
+    .header {
+        padding: 40px 16px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 40px 16px;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+    .project-card {
+        padding: 18px;
+    }
+
+    .project-image {
+        max-width: 200px;
+    }
 }

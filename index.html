@@ -16,13 +16,8 @@
     <meta property="og:url" content="https://seu-dominio-aqui.com/">
     <meta property="og:image" content="https://seu-dominio-aqui.com/img/foto.jpeg">
 
-    <!-- Favicon (opcional, cria esse arquivo depois) -->
+    <!-- Favicon (opcional) -->
     <link rel="icon" type="image/png" href="img/favicon.png">
-
-    <!-- Analytics (substitui o domínio depois, se quiser usar) -->
-    <!--
-    <script defer data-domain="seu-dominio-aqui.com" src="https://plausible.io/js/script.js"></script>
-    -->
 
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -54,7 +49,7 @@
                 <a href="#contact" class="nav-link">Contatti</a>
             </nav>
 
-            <!-- Switch de idioma -->
+            <!-- Switch de idioma (se não usar EN, pode apagar) -->
             <div class="lang-switch">
                 <span class="lang-active">IT</span>
                 <span>·</span>
@@ -168,7 +163,7 @@
             <div class="tool-item">Git &amp; GitHub</div>
             <div class="tool-item">GCC / G++</div>
             <div class="tool-item">Java (JDK)</div>
-            <div class="tool-item">Terminale (bash/cmd)</div>
+            <div class="tool-item">Terminale</div>
             <div class="tool-item">Browser DevTools</div>
         </div>
     </section>
@@ -188,7 +183,6 @@
                             Anagrafe
                         </a>
                     </h4>
-                    <img src="img/projects/anagrafe.png" alt="Screenshot del programma Anagrafe" class="project-image">
                     <p>
                         Programma in C per gestire un’anagrafe di persone.
                     </p>
@@ -208,7 +202,6 @@
                             Tris
                         </a>
                     </h4>
-                    <img src="img/projects/tris.png" alt="Screenshot del gioco Tris" class="project-image">
                     <p>
                         Implementazione del gioco del Tris in C.
                     </p>
@@ -228,7 +221,6 @@
                             Calcolatrice con file
                         </a>
                     </h4>
-                    <img src="img/projects/calcolatrice.png" alt="Screenshot della calcolatrice in C" class="project-image">
                     <p>
                         Calcolatrice che salva e legge risultati da file.
                     </p>
@@ -254,7 +246,6 @@
                             Somma di due numeri
                         </a>
                     </h4>
-                    <img src="img/projects/somma.png" alt="Screenshot programma Somma due numeri" class="project-image">
                     <p>
                         Programma base per sommare due numeri.
                     </p>
@@ -274,7 +265,6 @@
                             Contatti
                         </a>
                     </h4>
-                    <img src="img/projects/contatti.png" alt="Screenshot programma Contatti" class="project-image">
                     <p>
                         Rubrica contatti in C++.
                     </p>
@@ -294,7 +284,6 @@
                             Media voti
                         </a>
                     </h4>
-                    <img src="img/projects/media.png" alt="Screenshot programma Media voti" class="project-image">
                     <p>
                         Calcolo della media dei voti degli studenti.
                     </p>
@@ -314,7 +303,6 @@
                             Numero pari o dispari
                         </a>
                     </h4>
-                    <img src="img/projects/pari-dispari.png" alt="Screenshot programma Pari o dispari" class="project-image">
                     <p>
                         Programma che controlla se un numero è pari o dispari.
                     </p>
@@ -340,7 +328,6 @@
                             Array
                         </a>
                     </h4>
-                    <img src="img/projects/java-array.png" alt="Screenshot programma Array Java" class="project-image">
                     <p>
                         Esempio di gestione di array in Java.
                     </p>
@@ -360,7 +347,6 @@
                             Numero intero
                         </a>
                     </h4>
-                    <img src="img/projects/numero-intero.png" alt="Screenshot classe NumeroIntero" class="project-image">
                     <p>
                         Classe Java per rappresentare un numero intero.
                     </p>
@@ -380,7 +366,6 @@
                             Persona
                         </a>
                     </h4>
-                    <img src="img/projects/persona.png" alt="Screenshot classe Persona" class="project-image">
                     <p>
                         Classe Persona con attributi e metodi.
                     </p>
@@ -407,8 +392,8 @@
         <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pietro-granda-boscarato-14bb42311?originalSubdomain=it" target="_blank">Profilo LinkedIn</a></p>
         <p><strong>GitHub:</strong> <a href="https://github.com/pietro-granda" target="_blank">github.com/pietro-granda</a></p>
 
-        <!-- Mini formulário de contato (front-end) -->
-        <form class="contact-form" action="#" method="post">
+        <!-- Formulário (agora "funciona" com JS de feedback) -->
+        <form class="contact-form" id="contactForm">
             <div class="form-row">
                 <input type="text" name="name" placeholder="Il tuo nome" required>
             </div>
@@ -420,6 +405,7 @@
             </div>
             <button type="submit" class="btn form-btn">Invia</button>
         </form>
+        <p class="contact-feedback" id="contactFeedback"></p>
     </section>
 
     <!-- Botão voltar ao topo -->
@@ -429,7 +415,7 @@
         <p>© 2025 Pietro Granda Boscarato - Tutti i diritti riservati</p>
     </footer>
 
-    <!-- JS do tema -->
+    <!-- JS -->
     <script src="theme.js"></script>
 </body>
 </html>

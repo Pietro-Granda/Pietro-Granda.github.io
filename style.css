@@ -68,14 +68,12 @@ body {
     text-decoration: none;
     font-size: 0.95rem;
     opacity: 0.85;
-    border-bottom: 1px solid transparent;
-    padding-bottom: 1px;
-    transition: opacity 0.15s, border-color 0.15s;
+    /* removido border-bottom pra não ter linha */
+    transition: opacity 0.15s;
 }
 
 .nav-link:hover {
     opacity: 1;
-    border-bottom-color: #ffffff;
 }
 
 /* BOTÕES */
@@ -103,6 +101,11 @@ body {
     background: #1a73e8;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Remover underline de todos os links por padrão */
+a {
+    text-decoration: none;
 }
 
 /* SEÇÕES */
@@ -212,11 +215,11 @@ section h2 {
 /* link no título */
 .project-title-link {
     color: #0077cc;
-    text-decoration: none;
+    text-decoration: none; /* sem linha */
 }
 
 .project-title-link:hover {
-    text-decoration: underline;
+    text-decoration: none; /* continua sem linha no hover */
 }
 
 .project-card p {
@@ -251,11 +254,11 @@ section h2 {
 
 .contact a {
     color: #1a73e8;
-    text-decoration: none;
+    text-decoration: none; /* sem underline */
 }
 
 .contact a:hover {
-    text-decoration: underline;
+    text-decoration: none; /* continua sem underline */
 }
 
 /* FOOTER */
@@ -293,9 +296,9 @@ body.dark .btn:hover {
 /* nav links no dark */
 body.dark .nav-link {
     color: #fdfdfd;
-    border-bottom-color: transparent;
 }
 
+/* linha separadora no dark */
 body.dark .section-divider {
     border-top-color: rgba(255,255,255,0.15);
 }
@@ -320,6 +323,11 @@ body.dark .project-card p {
     color: #ddd;
 }
 
+/* título/link do projeto em roxo no dark */
+body.dark .project-title-link {
+    color: #F000FF;
+}
+
 /* botão do projeto em roxo */
 body.dark .project-btn {
     background: #F000FF;
@@ -333,8 +341,7 @@ body.dark .project-btn:hover {
 /* NOMES DAS LINGUAGENS (C, C++, Java) + títulos + links em roxo no dark */
 body.dark .project-section h3,
 body.dark section h2,
-body.dark .contact a,
-body.dark .project-title-link {
+body.dark .contact a {
     color: #F000FF;
 }
 

@@ -1,6 +1,8 @@
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 const backToTopBtn = document.getElementById('backToTop');
+const contactForm = document.getElementById('contactForm');
+const contactFeedback = document.getElementById('contactFeedback');
 
 // Tema salvo
 const savedTheme = localStorage.getItem('theme');
@@ -41,5 +43,18 @@ if (backToTopBtn) {
             top: 0,
             behavior: 'smooth'
         });
+    });
+}
+
+// "Funcionamento" do formulário de contato (feedback na tela)
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // não recarrega a página
+
+        if (contactFeedback) {
+            contactFeedback.textContent = "Grazie! Il modulo è solo dimostrativo: per ora puoi contattarmi via email a boscaratopietro@gmail.com 😊";
+        }
+
+        contactForm.reset();
     });
 }

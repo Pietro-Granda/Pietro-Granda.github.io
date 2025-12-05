@@ -1,17 +1,25 @@
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-// estado inicial: se quiser começar claro, deixa sem 'dark'
-themeToggle.textContent = '🌙';
+// Verifica tema salvo no localStorage ao carregar a página
+const savedTheme = localStorage.getItem('theme');
 
+if (savedTheme === 'dark') {
+    body.classList.add('dark');
+    themeToggle.textContent = '☀️'; // já começa no escuro, mostra sol
+} else {
+    themeToggle.textContent = '🌙'; // padrão: claro, mostra lua
+}
+
+// Alterna tema ao clicar no botão
 themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark');
+    const isDark = body.classList.toggle('dark');
 
-    if (body.classList.contains('dark')) {
-        // modo escuro ligado -> mostra sol
+    if (isDark) {
         themeToggle.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
     } else {
-        // modo claro -> mostra lua
         themeToggle.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
     }
 });

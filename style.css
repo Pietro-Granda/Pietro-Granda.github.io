@@ -1,3 +1,8 @@
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Reset e corpo */
 * {
     margin: 0;
@@ -18,7 +23,6 @@ body {
     background: linear-gradient(135deg, #1f1f1f, #333);
     color: white;
     text-align: center;
-    padding: 50px 20px;
     padding: 60px 30px;
 }
 
@@ -28,7 +32,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .profile-pic {
@@ -38,9 +42,45 @@ body {
     border-radius: 50%;
 }
 
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 0.95rem;
+    max-width: 520px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* NAV INTERNA */
+.nav-links {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.nav-link {
+    color: #fdfdfd;
+    text-decoration: none;
+    font-size: 0.95rem;
+    opacity: 0.85;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    transition: opacity 0.15s, border-color 0.15s;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    border-bottom-color: #ffffff;
+}
+
 /* BOTÕES */
 .buttons {
-    margin-top: 12px;
+    margin-top: 16px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -54,7 +94,7 @@ body {
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
-    transition: background 0.2s, transform 0.15s;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
     border: none;
     cursor: pointer;
 }
@@ -62,11 +102,12 @@ body {
 .btn:hover {
     background: #1a73e8;
     transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 /* SEÇÕES */
 section {
-    padding: 40px 20px;
+    padding: 60px 20px;
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
@@ -75,12 +116,22 @@ section {
 section h2 {
     color: #1a73e8;
     margin-bottom: 18px;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
 }
 
+/* linha separadora entre seções */
+.section-divider {
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ABOUT */
 .about p {
     font-size: 1.05rem;
     line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 /* SKILLS */
@@ -99,23 +150,28 @@ section h2 {
     font-weight: 700;
     text-decoration: none;
     color: #333;
-    transition: background 0.15s, transform 0.12s;
+    transition: background 0.15s, transform 0.12s, box-shadow 0.12s;
 }
 
 .skill:hover {
     background: #cfcfcf;
     transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* PROJECTS */
+.projects {
+    margin-top: 20px;
+}
+
 .project-section {
-    margin-top: 80px; /* mais espaçamento entre linguagens */
+    margin-top: 50px; /* mais espaçamento entre linguagens */
 }
 
 .project-section h3 {
     color: #0077cc;
-    font-size: 2rem;   /* maior que antes */
-    margin-bottom: 30px; /* separa título dos projetos */
+    font-size: 2rem;
+    margin-bottom: 30px;
     display: inline-block;
     padding-bottom: 8px;
 }
@@ -123,8 +179,9 @@ section h2 {
 /* GRID dos projetos */
 .project-grid {
     display: grid;
-    grid-template-columns: 1fr; /* vertical mobile */
-    gap: 30px;                  /* mais espaço entre os cards */
+    grid-template-columns: 1fr; /* mobile: 1 por linha */
+    gap: 30px;
+    justify-items: center;
 }
 
 @media (min-width: 900px) {
@@ -140,16 +197,26 @@ section h2 {
     border-radius: 10px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
     text-align: center;
-    min-height: 110px; /* 🔹 menor que antes (era 140px) */
+    min-height: 110px; /* quadrado menor */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+/* título do projeto */
 .project-card h4 {
-    color: #0077cc;
     margin-bottom: 10px;
-    font-size: 1.3rem; /* menor que nome da linguagem */
+    font-size: 1.3rem;
+}
+
+/* link no título */
+.project-title-link {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.project-title-link:hover {
+    text-decoration: underline;
 }
 
 .project-card p {
@@ -157,6 +224,7 @@ section h2 {
     font-size: 0.98rem;
 }
 
+/* BOTÃO do projeto */
 .project-btn {
     display: inline-block;
     margin-top: 12px;
@@ -166,13 +234,28 @@ section h2 {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 700;
-    transition: background 0.15s, transform 0.12s;
+    transition: background 0.15s, transform 0.12s, box-shadow 0.12s;
 }
 
 .project-btn:hover {
     background: #005fa3;
     transform: translateY(-2px);
     box-shadow: 2px 2px 10px #005fa3;
+}
+
+/* CONTATTO */
+.contact p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.contact a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
 }
 
 /* FOOTER */
@@ -206,6 +289,16 @@ body.dark .btn:hover {
     background: #55108c;
 }
 
+/* nav links no dark */
+body.dark .nav-link {
+    color: #fdfdfd;
+    border-bottom-color: transparent;
+}
+
+body.dark .section-divider {
+    border-top-color: rgba(255,255,255,0.15);
+}
+
 /* skills escuras */
 body.dark .skill {
     background: #333;
@@ -222,16 +315,12 @@ body.dark .project-card {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
 }
 
-body.dark .project-card h4 {
-    color: #c49bff;
-}
-
-body.dark .project-card h2 {
-    color: #c49bff;
-}
-
 body.dark .project-card p {
     color: #ddd;
+}
+
+body.dark .project-title-link {
+    color: #c49bff;
 }
 
 /* botão do projeto em roxo */
@@ -246,10 +335,6 @@ body.dark .project-btn:hover {
 
 /* nomes das linguagens (C, C++, Java) em roxo #BF00FF no dark */
 body.dark .project-section h3 {
-    color: #BF00FF;
-}
-
-body.dark .project-section h2 {
     color: #BF00FF;
 }
 

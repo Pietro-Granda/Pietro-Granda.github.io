@@ -125,7 +125,7 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* remover underline de todos os links */
+/* remover underline geral */
 a {
     text-decoration: none;
 }
@@ -298,7 +298,8 @@ section h2 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
-    justify-items: center;
+    justify-items: stretch;   /* 🔹 estica todos os cards na linha */
+    align-items: stretch;     /* 🔹 garante mesma altura entre eles */
 }
 
 @media (min-width: 900px) {
@@ -314,10 +315,11 @@ section h2 {
     border-radius: 10px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
     text-align: center;
-    min-height: 110px;
+    min-height: 160px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;                 /* 🔹 ocupa 100% da altura disponível na linha */
     transform-origin: center center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -325,16 +327,6 @@ section h2 {
 .project-card:hover {
     transform: scale(1.04);
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
-}
-
-/* imagem do projeto */
-.project-image {
-    width: 100%;
-    max-width: 220px;
-    height: auto;
-    margin: 6px auto 10px;
-    border-radius: 6px;
-    object-fit: cover;
 }
 
 /* título do projeto */
@@ -418,6 +410,11 @@ section h2 {
     width: 100%;
 }
 
+.contact-feedback {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -449,23 +446,6 @@ footer {
 
 .back-to-top.show {
     display: flex;
-}
-
-/* Página 404 */
-.not-found {
-    padding: 60px 20px;
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.not-found h1 {
-    font-size: 4rem;
-    margin-bottom: 10px;
-}
-
-.not-found p {
-    margin-bottom: 10px;
 }
 
 /* ===================== */
@@ -517,6 +497,7 @@ body.dark .skill:hover {
 body.dark .skill-bar {
     background: #333;
 }
+
 body.dark .skill-fill {
     background: #F000FF;
 }
@@ -597,9 +578,5 @@ body.dark .back-to-top {
 
     .project-card {
         padding: 18px;
-    }
-
-    .project-image {
-        max-width: 200px;
     }
 }

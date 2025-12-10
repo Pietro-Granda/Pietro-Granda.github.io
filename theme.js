@@ -4,7 +4,10 @@ const backToTopBtn = document.getElementById('backToTop');
 const contactForm = document.getElementById('contactForm');
 const contactFeedback = document.getElementById('contactFeedback');
 
-// Tema salvo
+// Lingua della pagina (es. "it" o "en")
+const htmlLang = document.documentElement.lang || 'it';
+
+// Tema salvato
 const savedTheme = localStorage.getItem('theme');
 
 if (savedTheme === 'dark') {
@@ -28,7 +31,7 @@ if (themeToggle) {
     });
 }
 
-// Botão voltar ao topo
+// Bottone "back to top"
 if (backToTopBtn) {
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
@@ -46,13 +49,48 @@ if (backToTopBtn) {
     });
 }
 
-// "Funcionamento" do formulário de contato (feedback na tela)
+// Form di contatto: apre l'email già compilata + messaggio di conferma
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // não recarrega a página
+        e.preventDefault(); // non ricarica la pagina
 
+        const formData = new FormData(contactForm);
+        const name = formData.get('name') || '';
+        const email = formData.get('email') || '';
+        const message = formData.get('message') || '';
+
+        // Oggetto dell'email
+        const subject = (htmlLang === 'en')
+            ? `Message from portfolio – ${name}`
+            : `Messaggio dal portfolio – ${name}`;
+
+        // Corpo dell'email
+        const bodyLines = (htmlLang === 'en')
+            ? [
+                `Name: ${name}`,
+                `Email: ${email}`,
+                '',
+                message
+              ]
+            : [
+                `Nome: ${name}`,
+                `Email: ${email}`,
+                '',
+                message
+              ];
+
+        const mailto = `mailto:boscaratopietro@gmail.com` +
+                       `?subject=${encodeURIComponent(subject)}` +
+                       `&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+
+        // apre il client di posta
+        window.location.href = mailto;
+
+        // Messaggio di feedback sotto al form
         if (contactFeedback) {
-            contactFeedback.textContent = "Grazie! Il modulo è solo dimostrativo: per ora puoi contattarmi via email a boscaratopietro@gmail.com 😊";
+            contactFeedback.textContent = (htmlLang === 'en')
+                ? 'Thank you! Your email app should open now. If it does not, you can write me directly at boscaratopietro@gmail.com 😊'
+                : 'Grazie! Il tuo programma di posta dovrebbe aprirsi ora. Se non si apre, puoi scrivermi direttamente a boscaratopietro@gmail.com 😊';
         }
 
         contactForm.reset();

@@ -580,17 +580,7 @@ body.dark .back-to-top {
         padding: 18px;
     }
 }
-/* ===================== */
-/*   THEME SWITCH (L)    */
-/* ===================== */
-
-/* Alinha o switch junto com os botões */
-.buttons .l {
-  margin: 0;              /* remove "margin: auto" do componente */
-  align-self: center;
-}
-
-/* From Uiverse.io by JkHuger */
+/* From Uiverse.io by JkHuger */ 
 .l {
   display: block;
   margin-bottom: 1.5em;
@@ -653,7 +643,6 @@ body.dark .back-to-top {
   height: 1em;
   box-sizing: border-box;
 }
-
 /* Checked */
 .l:checked {
   background-color: rgba(0, 0, 0, 0.45);
@@ -669,8 +658,8 @@ body.dark .back-to-top {
   border-left-color: currentColor;
   transform: translateX(-2.5%) rotateY(180deg);
 }
-
-/* Focus */
+/* Other States */
 .l:focus {
+  /* Usually an anti-A11Y practice but set to remove an annoyance just for this demo */
   outline: 0;
 }

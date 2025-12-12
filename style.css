@@ -100,57 +100,67 @@ body {
 
 /* BOTÕES */
 /* Botão com borda em degradê + miolo preto + texto branco */
-.container{
-  position: relative;
-  display: inline-flex;
-  padding: 3px; /* mostra a "borda" degradê */
-  border-radius: 0.9em;
-  background: linear-gradient(90deg, #03a9f4, #f441a5);
-  text-decoration: none;
-  margin: 10px; /* ESPAÇO ENTRE OS BOTÕES */
-  transition: transform 0.15s ease;
+.container {
+    position: relative;
+    display: inline-flex;
+    font-size: 1.4em;
+    padding: 0.6em 0.8em;
+    /* mostra a "borda" degradê */
+    border-radius: 0.5em;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px #000000b4;
+    margin: 10px;
+    /* ESPAÇO ENTRE OS BOTÕES */
+    transition: transform 0.15s ease;
 }
 
-.container::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 0.9em;
-  z-index: -1;
-  background: linear-gradient(90deg, #03a9f4, #f441a5);
-  filter: blur(0);
-  transition: filter 0.4s ease;
+.container::before {
+    content: "";
+    position: relative;
+    padding: 3px;
+    inset: 0;
+    border-radius: 0.9em;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5);
+    filter: blur(0);
+    transition: all 0.4s ease;
 }
 
-.container:hover::before{
-  filter: blur(1.2em);
+.container:hover::before {
+    background: linear-gradient(90deg, #03a9f4, #f441a5);
+    filter: blur(1.2em);
 }
 
-.container:active{
-  transform: translateY(2px);
+.container:active {
+    transform: translateY(2px);
 }
 
-.container:active::before{
-  filter: blur(0.2em);
+.container:active::before {
+    filter: blur(0.2em);
 }
 
 /* Miolo preto (a parte "de cima") */
-.container .button{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.container .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-  background: #000;
-  color: #fff;
+    background: #000;
+    color: #fff;
 
-  font-size: 1.05em;
-  font-weight: 700;
+    font-size: 1.05em;
+    font-weight: 700;
 
-  padding: 0.65em 1.1em;
-  border-radius: 0.7em; /* menor que o de fora pra aparecer a borda */
-  box-shadow: 2px 2px 3px #000000b4;
+    padding: 0.65em 1.1em;
+    border-radius: 0.7em;
+    /* menor que o de fora pra aparecer a borda */
+    box-shadow: 2px 2px 3px #000000b4;
 
-  user-select: none;
+    user-select: none;
 }
 
 /* remover underline geral */
@@ -175,7 +185,7 @@ section h2 {
 /* linha separadora entre seções */
 .section-divider {
     border: none;
-    border-top: 1px solid rgba(0,0,0,0.08);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
     max-width: 900px;
     margin: 0 auto;
 }
@@ -208,7 +218,7 @@ section h2 {
 .skill:hover {
     background: #cfcfcf;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Barras de skill */
@@ -245,10 +255,21 @@ section h2 {
 }
 
 /* níveis */
-.skill-fill.c      { width: 70%; }
-.skill-fill.cpp    { width: 60%; }
-.skill-fill.java   { width: 55%; }
-.skill-fill.web    { width: 40%; }
+.skill-fill.c {
+    width: 70%;
+}
+
+.skill-fill.cpp {
+    width: 60%;
+}
+
+.skill-fill.java {
+    width: 55%;
+}
+
+.skill-fill.web {
+    width: 40%;
+}
 
 /* Cosa sto studiando + Prossimi passi */
 .learning-wrapper {
@@ -326,8 +347,10 @@ section h2 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
-    justify-items: stretch;   /* 🔹 estica todos os cards na linha */
-    align-items: stretch;     /* 🔹 garante mesma altura entre eles */
+    justify-items: stretch;
+    /* 🔹 estica todos os cards na linha */
+    align-items: stretch;
+    /* 🔹 garante mesma altura entre eles */
 }
 
 @media (min-width: 900px) {
@@ -347,7 +370,8 @@ section h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;                 /* 🔹 ocupa 100% da altura disponível na linha */
+    height: 100%;
+    /* 🔹 ocupa 100% da altura disponível na linha */
     transform-origin: center center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -468,7 +492,7 @@ footer {
     display: none;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     z-index: 10;
 }
 
@@ -508,7 +532,7 @@ body.dark .nav-link {
 
 /* linha separadora no dark */
 body.dark .section-divider {
-    border-top-color: rgba(255,255,255,0.15);
+    border-top-color: rgba(255, 255, 255, 0.15);
 }
 
 /* skills escuras */
@@ -608,127 +632,129 @@ body.dark .back-to-top {
         padding: 18px;
     }
 }
-/* From Uiverse.io by JkHuger */ 
+
+/* From Uiverse.io by JkHuger */
 .l {
-  display: block;
-  margin-bottom: 1.5em;
-  font-size: 1em;
-  cursor: pointer;
+    display: block;
+    margin-bottom: 1.5em;
+    font-size: 1em;
+    cursor: pointer;
 }
 
 .l {
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 0.75em;
-  box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.3) inset;
-  color: #fdea7b;
-  display: inline-flex;
-  align-items: center;
-  margin: auto;
-  padding: 0.15em;
-  width: 3em;
-  height: 1.5em;
-  transition:
-    background-color 0.1s 0.3s ease-out,
-    box-shadow 0.1s 0.3s ease-out;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.75em;
+    box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.3) inset;
+    color: #fdea7b;
+    display: inline-flex;
+    align-items: center;
+    margin: auto;
+    padding: 0.15em;
+    width: 3em;
+    height: 1.5em;
+    transition:
+        background-color 0.1s 0.3s ease-out,
+        box-shadow 0.1s 0.3s ease-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .l:before,
 .l:after {
-  content: "";
-  display: block;
+    content: "";
+    display: block;
 }
 
 .l:before {
-  background-color: #d7d7d7;
-  border-radius: 50%;
-  width: 1.2em;
-  height: 1.2em;
-  transition:
-    background-color 0.1s 0.3s ease-out,
-    transform 0.3s ease-out;
-  z-index: 1;
+    background-color: #d7d7d7;
+    border-radius: 50%;
+    width: 1.2em;
+    height: 1.2em;
+    transition:
+        background-color 0.1s 0.3s ease-out,
+        transform 0.3s ease-out;
+    z-index: 1;
 }
 
 .l:after {
-  background:
-    linear-gradient(transparent 50%, rgba(0, 0, 0, 0.15) 0) 0 50% / 50% 100%,
-    repeating-linear-gradient(90deg, #bbb 0, #bbb, #bbb 20%, #999 20%, #999 40%)
-      0 50% / 50% 100%,
-    radial-gradient(circle at 50% 50%, #888 25%, transparent 26%);
-  background-repeat: no-repeat;
-  border: 0.25em solid transparent;
-  border-left: 0.4em solid #d8d8d8;
-  border-right: 0 solid transparent;
-  transition:
-    border-left-color 0.1s 0.3s ease-out,
-    transform 0.3s ease-out;
-  transform: translateX(-22.5%);
-  transform-origin: 25% 50%;
-  width: 1.2em;
-  height: 1em;
-  box-sizing: border-box;
+    background:
+        linear-gradient(transparent 50%, rgba(0, 0, 0, 0.15) 0) 0 50% / 50% 100%,
+        repeating-linear-gradient(90deg, #bbb 0, #bbb, #bbb 20%, #999 20%, #999 40%) 0 50% / 50% 100%,
+        radial-gradient(circle at 50% 50%, #888 25%, transparent 26%);
+    background-repeat: no-repeat;
+    border: 0.25em solid transparent;
+    border-left: 0.4em solid #d8d8d8;
+    border-right: 0 solid transparent;
+    transition:
+        border-left-color 0.1s 0.3s ease-out,
+        transform 0.3s ease-out;
+    transform: translateX(-22.5%);
+    transform-origin: 25% 50%;
+    width: 1.2em;
+    height: 1em;
+    box-sizing: border-box;
 }
+
 /* Checked */
 .l:checked {
-  background-color: rgba(0, 0, 0, 0.45);
-  box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.1) inset;
+    background-color: rgba(0, 0, 0, 0.45);
+    box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.1) inset;
 }
 
 .l:checked:before {
-  background-color: currentColor;
-  transform: translateX(125%);
+    background-color: currentColor;
+    transform: translateX(125%);
 }
 
 .l:checked:after {
-  border-left-color: currentColor;
-  transform: translateX(-2.5%) rotateY(180deg);
+    border-left-color: currentColor;
+    transform: translateX(-2.5%) rotateY(180deg);
 }
+
 /* Other States */
 .l:focus {
-  /* Usually an anti-A11Y practice but set to remove an annoyance just for this demo */
-  outline: 0;
+    /* Usually an anti-A11Y practice but set to remove an annoyance just for this demo */
+    outline: 0;
 }
+
 /* From Uiverse.io by Creatlydev */
 .btn-github {
-  cursor: pointer;
-  display: flex;
-  gap: 0.5rem;
-  border: none;
+    cursor: pointer;
+    display: flex;
+    gap: 0.5rem;
+    border: none;
 
-  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  border-radius: 100px;
-  font-weight: 800;
-  place-content: center;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 100px;
+    font-weight: 800;
+    place-content: center;
 
-  padding: 0.75rem 1rem;
-  font-size: 0.825rem;
-  line-height: 1rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.825rem;
+    line-height: 1rem;
 
-  background-color: rgba(0, 0, 0, 0.4);
-  box-shadow:
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
-  color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow:
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    color: #fff;
 }
 
 /* Hover padrão (modo claro) = azul */
 .btn-github:hover {
-  box-shadow:
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
-    inset 0 0 0 1px rgba(52, 152, 219, 0.25);
-  color: #3498db;
-  transform: translate(0, -0.25rem);
-  background-color: rgba(0, 0, 0, 0.5);
+    box-shadow:
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+        inset 0 0 0 1px rgba(52, 152, 219, 0.25);
+    color: #3498db;
+    transform: translate(0, -0.25rem);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Hover no modo escuro = roxo (quando o <html> tiver class="dark") */
 .dark .btn-github:hover {
-  box-shadow:
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
-    inset 0 0 0 1px rgba(142, 68, 173, 0.25);
-  color: #4a0667;
+    box-shadow:
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+        inset 0 0 0 1px rgba(142, 68, 173, 0.25);
+    color: #4a0667;
 }
-

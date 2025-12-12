@@ -1,98 +1,118 @@
+// ===== THEME TOGGLE + BACK TO TOP + CONTACT FORM =====
+
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 const backToTopBtn = document.getElementById('backToTop');
 const contactForm = document.getElementById('contactForm');
 const contactFeedback = document.getElementById('contactFeedback');
 
-// Lingua della pagina (es. "it" o "en")
+// Lingua da página (ex. "it" ou "en")
 const htmlLang = document.documentElement.lang || 'it';
 
-// Tema salvato
+// Tema salvo
 const savedTheme = localStorage.getItem('theme');
 
+// Aplica tema
+function applyTheme(theme) {
+  const isDark = theme === 'dark';
+
+  body.classList.toggle('dark', isDark);
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+  // Se for SWITCH (checkbox): checked = LIGHT (luz acesa)
+  if (themeToggle && themeToggle.matches('input[type="checkbox"]')) {
+    themeToggle.checked = !isDark;
+    themeToggle.setAttribute('aria-checked', String(!isDark));
+  }
+
+  // Se for BOTÃO antigo: muda o ícone
+  if (themeToggle && themeToggle.tagName === 'BUTTON') {
+    themeToggle.textContent = isDark ? '☀️' : '🌙';
+  }
+}
+
+// Inicializa tema
 if (savedTheme === 'dark') {
-    body.classList.add('dark');
-    if (themeToggle) themeToggle.textContent = '☀️';
+  applyTheme('dark');
+} else if (savedTheme === 'light') {
+  applyTheme('light');
 } else {
-    if (themeToggle) themeToggle.textContent = '🌙';
+  // padrão: light
+  applyTheme('light');
 }
 
-// Toggle tema
+// Eventos do toggle (switch ou botão)
 if (themeToggle) {
+  // SWITCH
+  if (themeToggle.matches('input[type="checkbox"]')) {
+    themeToggle.addEventListener('change', () => {
+      // checked = light, unchecked = dark
+      applyTheme(themeToggle.checked ? 'light' : 'dark');
+    });
+  }
+
+  // BOTÃO antigo
+  if (themeToggle.tagName === 'BUTTON') {
     themeToggle.addEventListener('click', () => {
-        const isDark = body.classList.toggle('dark');
-        if (isDark) {
-            themeToggle.textContent = '☀️';
-            localStorage.setItem('theme', 'dark');
-        } else {
-            themeToggle.textContent = '🌙';
-            localStorage.setItem('theme', 'light');
-        }
+      const isCurrentlyDark = body.classList.contains('dark');
+      applyTheme(isCurrentlyDark ? 'light' : 'dark');
     });
+  }
 }
 
-// Bottone "back to top"
+// Botão "back to top"
 if (backToTopBtn) {
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            backToTopBtn.classList.add('show');
-        } else {
-            backToTopBtn.classList.remove('show');
-        }
-    });
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('show');
+    } else {
+      backToTopBtn.classList.remove('show');
+    }
+  });
 
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 }
 
-// Form di contatto: apre l'email già compilata + messaggio di conferma
+// Form de contato: abre o email já preenchido + mensagem de feedback
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // non ricarica la pagina
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // não recarrega a página
 
-        const formData = new FormData(contactForm);
-        const name = formData.get('name') || '';
-        const email = formData.get('email') || '';
-        const message = formData.get('message') || '';
+    const formData = new FormData(contactForm);
+    const name = formData.get('name') || '';
+    const email = formData.get('email') || '';
+    const message = formData.get('message') || '';
 
-        // Oggetto dell'email
-        const subject = (htmlLang === 'en')
-            ? `Message from portfolio – ${name}`
-            : `Messaggio dal portfolio – ${name}`;
+    // Assunto do email
+    const subject =
+      htmlLang === 'en'
+        ? `Message from portfolio – ${name}`
+        : `Messaggio dal portfolio – ${name}`;
 
-        // Corpo dell'email
-        const bodyLines = (htmlLang === 'en')
-            ? [
-                `Name: ${name}`,
-                `Email: ${email}`,
-                '',
-                message
-              ]
-            : [
-                `Nome: ${name}`,
-                `Email: ${email}`,
-                '',
-                message
-              ];
+    // Corpo do email
+    const bodyLines =
+      htmlLang === 'en'
+        ? [`Name: ${name}`, `Email: ${email}`, '', message]
+        : [`Nome: ${name}`, `Email: ${email}`, '', message];
 
-        const mailto = `mailto:boscaratopietro@gmail.com` +
-                       `?subject=${encodeURIComponent(subject)}` +
-                       `&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+    const mailto =
+      `mailto:boscaratopietro@gmail.com` +
+      `?subject=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(bodyLines.join('\n'))}`;
 
-        // apre il client di posta
-        window.location.href = mailto;
+    // Abre o client de email
+    window.location.href = mailto;
 
-        // Messaggio di feedback sotto al form
-        if (contactFeedback) {
-            contactFeedback.textContent = (htmlLang === 'en')
-                ? 'Thank you! Your email app should open now. If it does not, you can write me directly at boscaratopietro@gmail.com 😊'
-                : 'Grazie! Il tuo programma di posta dovrebbe aprirsi ora. Se non si apre, puoi scrivermi direttamente a boscaratopietro@gmail.com 😊';
-        }
+    // Feedback
+    if (contactFeedback) {
+      contactFeedback.textContent =
+        htmlLang === 'en'
+          ? 'Thank you! Your email app should open now. If it does not, you can write me directly at boscaratopietro@gmail.com 😊'
+          : 'Grazie! Il tuo programma di posta dovrebbe aprirsi ora. Se non si apre, puoi scrivermi direttamente a boscaratopietro@gmail.com 😊';
+    }
 
-        contactForm.reset();
-    });
+    contactForm.reset();
+  });
 }

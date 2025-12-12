@@ -6,68 +6,53 @@ const backToTopBtn = document.getElementById('backToTop');
 const contactForm = document.getElementById('contactForm');
 const contactFeedback = document.getElementById('contactFeedback');
 
-// Lingua da página (ex. "it" ou "en")
 const htmlLang = document.documentElement.lang || 'it';
 
-// Tema salvo
-const savedTheme = localStorage.getItem('theme');
-
-// Aplica tema
-function applyTheme(theme) {
+function setTheme(theme) {
   const isDark = theme === 'dark';
-
   body.classList.toggle('dark', isDark);
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 
-  // Se for SWITCH (checkbox): checked = LIGHT (luz acesa)
+  // Se for SWITCH: checked = LIGHT (luz acesa)
   if (themeToggle && themeToggle.matches('input[type="checkbox"]')) {
     themeToggle.checked = !isDark;
     themeToggle.setAttribute('aria-checked', String(!isDark));
   }
 
-  // Se for BOTÃO antigo: muda o ícone
+  // Se for BOTÃO antigo: troca o ícone
   if (themeToggle && themeToggle.tagName === 'BUTTON') {
     themeToggle.textContent = isDark ? '☀️' : '🌙';
   }
 }
 
 // Inicializa tema
-if (savedTheme === 'dark') {
-  applyTheme('dark');
-} else if (savedTheme === 'light') {
-  applyTheme('light');
-} else {
-  // padrão: light
-  applyTheme('light');
-}
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') setTheme('dark');
+else setTheme('light');
 
-// Eventos do toggle (switch ou botão)
+// Evento do toggle
 if (themeToggle) {
-  // SWITCH
+  // SWITCH (checkbox)
   if (themeToggle.matches('input[type="checkbox"]')) {
     themeToggle.addEventListener('change', () => {
       // checked = light, unchecked = dark
-      applyTheme(themeToggle.checked ? 'light' : 'dark');
+      setTheme(themeToggle.checked ? 'light' : 'dark');
     });
   }
 
   // BOTÃO antigo
   if (themeToggle.tagName === 'BUTTON') {
     themeToggle.addEventListener('click', () => {
-      const isCurrentlyDark = body.classList.contains('dark');
-      applyTheme(isCurrentlyDark ? 'light' : 'dark');
+      const isDarkNow = body.classList.contains('dark');
+      setTheme(isDarkNow ? 'light' : 'dark');
     });
   }
 }
 
-// Botão "back to top"
+// Back to top
 if (backToTopBtn) {
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      backToTopBtn.classList.add('show');
-    } else {
-      backToTopBtn.classList.remove('show');
-    }
+    backToTopBtn.classList.toggle('show', window.scrollY > 300);
   });
 
   backToTopBtn.addEventListener('click', () => {
@@ -75,23 +60,21 @@ if (backToTopBtn) {
   });
 }
 
-// Form de contato: abre o email já preenchido + mensagem de feedback
+// Contact form (mailto)
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
-    e.preventDefault(); // não recarrega a página
+    e.preventDefault();
 
     const formData = new FormData(contactForm);
     const name = formData.get('name') || '';
     const email = formData.get('email') || '';
     const message = formData.get('message') || '';
 
-    // Assunto do email
     const subject =
       htmlLang === 'en'
         ? `Message from portfolio – ${name}`
         : `Messaggio dal portfolio – ${name}`;
 
-    // Corpo do email
     const bodyLines =
       htmlLang === 'en'
         ? [`Name: ${name}`, `Email: ${email}`, '', message]
@@ -102,10 +85,8 @@ if (contactForm) {
       `?subject=${encodeURIComponent(subject)}` +
       `&body=${encodeURIComponent(bodyLines.join('\n'))}`;
 
-    // Abre o client de email
     window.location.href = mailto;
 
-    // Feedback
     if (contactFeedback) {
       contactFeedback.textContent =
         htmlLang === 'en'

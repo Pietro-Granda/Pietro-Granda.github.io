@@ -101,12 +101,10 @@ body {
 /* BOTÕES */
 /* Botão com borda em degradê + miolo preto + texto branco */
 .container {
-    display: inline-flex;
     font-size: 1.4em;
     padding: 0.6em 0.8em;
     /* mostra a "borda" degradê */
     border-radius: 0.5em;
-    border: none;
     background-color: #000;
     color: #fff;
     cursor: pointer;

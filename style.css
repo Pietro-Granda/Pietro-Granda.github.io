@@ -492,12 +492,12 @@ body.dark .header {
 /* botões em roxo no dark */
 body.dark .btn,
 body.dark .form-btn {
-    background: #55235b;
+    background: ##8A00C4;
 }
 
 body.dark .btn:hover,
 body.dark .form-btn:hover {
-    background: #55235b;
+    background: ##8A00C4;
     box-shadow: 0 4px 10px rgba(240, 0, 255, 0.4);
 }
 
@@ -527,7 +527,7 @@ body.dark .skill-bar {
 }
 
 body.dark .skill-fill {
-    background: #55235b;
+    background: ##8A00C4;
 }
 
 /* ferramentas no dark */
@@ -548,24 +548,24 @@ body.dark .project-tech-list {
 
 /* título/link do projeto em roxo no dark */
 body.dark .project-title-link {
-    color: #55235b;
+    color: ##8A00C4;
 }
 
 /* botão do projeto em roxo */
 body.dark .project-btn {
-    background: #55235b;
+    background: ##8A00C4;
 }
 
 body.dark .project-btn:hover {
-    background: #55235b;
-    box-shadow: 2px 2px 10px #55235b;
+    background: ##8A00C4;
+    box-shadow: 2px 2px 10px ##8A00C4;
 }
 
 /* nomes das linguagens + títulos + links em roxo no dark */
 body.dark .project-section h3,
 body.dark section h2,
 body.dark .contact a {
-    color: #55235b;
+    color: ##8A00C4;
 }
 
 /* footer escuro */
@@ -575,7 +575,7 @@ body.dark footer {
 
 /* Botão voltar ao topo no dark */
 body.dark .back-to-top {
-    background: #55235b;
+    background: ##8A00C4;
 }
 
 /* RESPONSIVO – mobile */
@@ -732,5 +732,5 @@ body.dark .back-to-top {
     box-shadow:
         inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
         inset 0 0 0 1px rgba(142, 68, 173, 0.25);
-    color: #55235b;
+    color: ##8A00C4;
 }

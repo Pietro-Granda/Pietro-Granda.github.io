@@ -12,7 +12,7 @@ body {
     margin: auto;
     padding: 30px 40px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 header {
@@ -85,7 +85,6 @@ footer {
     color: #555;
     margin-top: 30px;
 }
-
 
 .download-cv {
     text-align: center;

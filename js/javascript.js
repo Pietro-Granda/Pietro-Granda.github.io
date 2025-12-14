@@ -83,7 +83,8 @@ if (contactForm) {
     });
 }
 
-
+let header = document.querySelector('.header');
+let rect = header.getBoundingClientRect();
 const container = document.querySelector('.floating-shapes');
 const numShapes = 30;
 const shapes = [
@@ -110,8 +111,8 @@ for (let i = 0; i < numShapes; i++) {
     }
     shape.classList.add('shape');
 
-    let x = Math.random() * window.innerWidth;
-    let y = Math.random() * window.innerHeight;
+    let x = Math.random() * rect.width;
+    let y = Math.random() * rect.height;
     let z = Math.random();
     let vx = (Math.random() - 0.5) * 0.2 * (1 + z);
     let vy = (Math.random() - 0.5) * 0.2 * (1 + z);
@@ -127,8 +128,8 @@ function animate() {
         obj.y += obj.vy;
 
         // Rimbalzo ai bordi
-        if (obj.x < -10 || obj.x > window.innerWidth + 10) obj.vx *= -1;
-        if (obj.y < -10 || obj.y > window.innerHeight + 10) obj.vy *= -1;
+        if (obj.x < 0 || obj.x > rect.width) obj.vx *= -1;
+        if (obj.y < 0 || obj.y > rect.height) obj.vy *= -1;
 
         obj.shape.style.transform = `translate3d(${obj.x}px, ${obj.y}px, 0)`;
     });
@@ -140,7 +141,7 @@ animate();
 
 window.addEventListener('resize', () => {
     floatingObjects.forEach(obj => {
-        if (obj.x > window.innerWidth) obj.x = window.innerWidth * Math.random();
-        if (obj.y > window.innerHeight) obj.y = window.innerHeight * Math.random();
+        if (obj.x > rect.width) obj.x = rect.width * Math.random();
+        if (obj.y > rect.height) obj.y = rect.height * Math.random();
     });
 });

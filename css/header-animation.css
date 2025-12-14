@@ -39,6 +39,8 @@
 }
 
 .floating-shapes .shape {
+    top: 0;
+    left: 0;
     position: absolute;
     font-size: 2rem;
     opacity: 0.6;

@@ -1,10 +1,12 @@
 <!-- Dichiara che questo documento usa HTML5 -->
 <!DOCTYPE html>
 
-<!-- Inizio del documento HTML. lang="it" indica che la lingua principale della pagina è italiano. -->
-<html lang="it">
+    <!-- Inizio del documento HTML. lang="it" indica che la lingua principale della pagina è italiano. -->
+    <html lang="it">
+
     <!-- Sezione head: contiene metadati, titolo della pagina, link ai CSS, ecc. Non è visibile direttamente nel contenuto della pagina. -->
     <head>
+
         <!-- Imposta la codifica dei caratteri su UTF-8 (supporta accenti e caratteri speciali). -->
         <meta charset="UTF-8" />
 
@@ -38,18 +40,24 @@
         <!-- Carica il foglio di stile CSS. -->
         <link rel="stylesheet" href="/css/style.css" />
 
-        <!-- Fine del head -->
+    <!-- Fine del head -->
     </head>
 
     <!-- Inizio del contenuto visibile della pagina -->
     <body>
+
         <!-- Intestazione principale della pagina (header). Di solito contiene controlli, profilo/nome e menu di navigazione. -->
         <header class="header">
+
+            <!-- Contenitore per forme/fluttuanti decorative (di solito gestite via CSS o generate con JS) -->
             <div class="floating-shapes"></div>
+
             <!-- Contenitore in alto per comandi rapidi: cambio lingua + toggle tema -->
             <div class="top-controls">
+
                 <!-- Selettore lingua: mostra la lingua attiva e il link per cambiare -->
                 <div class="lang-switch">
+
                     <!-- Lingua attualmente attiva (Italiano) -->
                     <span class="lang-active">IT</span>
 
@@ -66,6 +74,7 @@
 
             <!-- Blocco profilo: foto, nome e descrizione breve -->
             <div class="profile-container">
+
                 <!-- Immagine profilo. alt serve per accessibilità e per SEO (testo alternativo se l'immagine non carica). -->
                 <img class="profile-pic" src="img/foto.jpeg" alt="Foto profilo" />
 
@@ -76,11 +85,13 @@
                 <p class="subtitle">Studente di informatica appassionato di programmazione in C, C++ e Java</p>
 
                 <!-- Testo “tagline”: una descrizione più lunga e personale -->
-                <p class="tagline">Utilizzo già questi linguaggi per creare piccoli progetti funzionanti e il mio obiettivo è imparare il più possibile, migliorando il mio codice passo dopo passo.</p>
+                <p class="tagline">Utilizzo già questi linguaggi per creare piccoli progetti funzionanti e il mio obiettivo
+                    è imparare il più possibile, migliorando il mio codice passo dopo passo.</p>
             </div>
 
             <!-- Menu di navigazione interno (ancore che portano a sezioni della stessa pagina) -->
             <nav class="nav-container">
+
                 <!-- Link alla sezione con id="about" -->
                 <a href="#about" class="nav-link">Chi sono</a>
 
@@ -99,10 +110,13 @@
 
             <!-- Contenitore dei pulsanti/CTA (E-mail, LinkedIn, GitHub, CV). -->
             <div class="container-buttons">
+
                 <!-- Wrapper del primo pulsante. -->
                 <div class="container">
+
                     <!-- Pulsante che apre Gmail in una nuova scheda per scrivere una mail -->
                     <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=boscaratopietro@gmail.com" target="_blank">
+
                         <!-- Testo del pulsante (qui usi uno span per lo stile grafico) -->
                         <span class="button">E-mail</span>
                     </a>
@@ -110,8 +124,11 @@
 
                 <!-- Wrapper del pulsante LinkedIn -->
                 <div class="container">
+
                     <!-- Link al profilo LinkedIn (si apre in una nuova scheda) -->
-                    <a class="btn" href="https://www.linkedin.com/in/pietro-granda-boscarato-14bb42311?originalSubdomain=it" target="_blank">
+                    <a class="btn" href="https://www.linkedin.com/in/pietro-granda-boscarato-14bb42311?originalSubdomain=it"
+                        target="_blank">
+
                         <!-- Testo del pulsante -->
                         <span class="button">LinkedIn</span>
                     </a>
@@ -119,8 +136,10 @@
 
                 <!-- Wrapper del pulsante GitHub -->
                 <div class="container">
+
                     <!-- Link al profilo GitHub (si apre in una nuova scheda) -->
                     <a class="btn" href="https://github.com/pietro-granda" target="_blank">
+
                         <!-- Testo del pulsante -->
                         <span class="button">GitHub</span>
                     </a>
@@ -128,8 +147,10 @@
 
                 <!-- Wrapper del pulsante CV -->
                 <div class="container">
+
                     <!-- Link alla pagina del CV (si apre in una nuova scheda). -->
                     <a class="btn" href="/pages/cv.html" target="_blank">
+
                         <!-- Testo del pulsante -->
                         <span class="button">CV</span>
                     </a>
@@ -141,20 +162,24 @@
 
         <!-- Contenuto principale della pagina (quello più importante). Aiuta anche accessibilità e SEO: indica al browser qual è la “parte centrale” del sito. -->
         <main>
+
             <!-- Sezione “Chi sono”. class="about" serve per lo stile CSS id="about" serve per i link interni tipo <a href="#about"> -->
             <section class="about" id="about">
+
                 <!-- Titolo della sezione (livello 2, sotto l'h1 della pagina) -->
                 <h2>Chi sono</h2>
 
                 <!-- Primo paragrafo di presentazione -->
                 <p>
-                    Sono uno studente di informatica con una forte passione per la programmazione e per la risoluzione dei problemi tramite il codice. Mi piace capire cosa succede “dietro le quinte” di un programma:
+                    Sono uno studente di informatica con una forte passione per la programmazione e per la risoluzione dei
+                    problemi tramite il codice. Mi piace capire cosa succede “dietro le quinte” di un programma:
                     strutture dati, gestione della memoria, input/output da file.
                 </p>
 
                 <!-- Secondo paragrafo: linguaggi attuali + obiettivo di crescita -->
                 <p>
-                    Al momento lavoro soprattutto con C, C++ e Java. Non mi considero ancora un esperto, ma so già scrivere programmi funzionanti e leggibili, e voglio continuare a migliorare costruendo progetti reali
+                    Al momento lavoro soprattutto con C, C++ e Java. Non mi considero ancora un esperto, ma so già scrivere
+                    programmi funzionanti e leggibili, e voglio continuare a migliorare costruendo progetti reali
                     che mi aiutino a crescere.
                 </p>
             </section>
@@ -162,58 +187,135 @@
             <!-- Linea orizzontale di separazione tra sezioni. class="section-divider" permette di personalizzarla via CSS (spessore, margini, colore, ecc.). -->
             <hr class="section-divider" />
 
+            <!-- Sezione "Competenze" del portfolio: contiene una breve descrizione + lista skill + barre di livello -->
             <section id="skills">
-                <h2>Competenze</h2>
-                <p>Queste sono le tecnologie che utilizzo oggi. Sto ancora imparando, ma so già creare programmi completi e sto lavorando per migliorare ogni giorno.</p>
 
+                <!-- Titolo della sezione -->
+                <h2>Competenze</h2>
+
+                <!-- Testo introduttivo: spiega cosa rappresentano le skill e che sei in fase di apprendimento -->
+                <p>
+                    Queste sono le tecnologie che utilizzo oggi. Sto ancora imparando, ma so già creare programmi completi e
+                    sto lavorando per migliorare ogni giorno.
+                </p>
+
+                <!-- Lista rapida delle skill (in alto): alcune sono link a cartelle GitHub, una è solo testo -->
                 <div class="skill-list">
-                    <a class="skill" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/tree/main/C" target="_blank">C</a>
-                    <a class="skill" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/tree/main/C%2B%2B" target="_blank">C++</a>
-                    <a class="skill" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/tree/main/Java" target="_blank">Java</a>
+
+                    <!-- Link alla cartella GitHub con i progetti in C -->
+                    <a class="skill" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/tree/main/C"
+                        target="_blank">C</a>
+
+                    <!-- Link alla cartella GitHub con i progetti in C++ -->
+
+                    <a class="skill" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/tree/main/C%2B%2B"
+                        target="_blank">C++</a>
+
+                    <!-- Link alla cartella GitHub con i progetti in Java -->
+                    <a class="skill" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/tree/main/Java"
+                        target="_blank">Java</a>
+
+                    <!-- Skill non cliccabile: usata solo come etichetta/testo -->
                     <div class="skill">HTML / CSS / JS</div>
                 </div>
 
+                <!-- Contenitore delle barre di livello: ogni blocco mostra nome skill + barra di avanzamento -->
                 <div class="skill-container">
+
+                    <!-- Blocco livello per C -->
                     <div class="skill-level">
+
+                        <!-- Nome della tecnologia -->
                         <span>C</span>
+
+                        <!-- Barra esterna (sfondo) -->
                         <div class="skill-bar">
+
+                            <!-- Riempimento della barra: la classe "c" in CSS decide percentuale/colore/animazione -->
                             <div class="skill-fill c"></div>
                         </div>
                     </div>
+
+                    <!-- Blocco livello per C++ -->
                     <div class="skill-level">
+                        
+                        <!-- Nome della tecnologia -->
                         <span>C++</span>
+
+                        <!-- Barra esterna (sfondo) -->
                         <div class="skill-bar">
+
+                            <!-- Riempimento: la classe "cpp" gestisce lo stile/percentuale -->
                             <div class="skill-fill cpp"></div>
                         </div>
                     </div>
+
+                    <!-- Blocco livello per Java -->
                     <div class="skill-level">
+
+                        <!-- Nome della tecnologia -->
                         <span>Java</span>
+
+                        <!-- Barra esterna (sfondo) -->
                         <div class="skill-bar">
+
+                            <!-- Riempimento: la classe "java" gestisce lo stile/percentuale -->
                             <div class="skill-fill java"></div>
                         </div>
                     </div>
+
+                    <!-- Blocco livello per Web (HTML/CSS/JavaScript) -->
                     <div class="skill-level">
+
+                        <!-- Nome della tecnologia -->
                         <span>HTML / CSS / JavaScript</span>
+
+                        <!-- Barra esterna (sfondo) -->
                         <div class="skill-bar">
+
+                            <!-- Riempimento: la classe "web" gestisce lo stile/percentuale -->
                             <div class="skill-fill web"></div>
                         </div>
                     </div>
+
                 </div>
             </section>
 
+
+            <!-- Linea orizzontale usata come separatore visivo tra sezioni -->
             <hr class="section-divider" />
 
+            <!-- Sezione "Cosa sto imparando": descrive gli argomenti su cui stai lavorando -->
             <section id="learning" class="learning-container">
+
+                <!-- Titolo della sezione -->
                 <h2>Cosa sto imparando</h2>
+
+                <!-- Testo introduttivo breve -->
                 <p>A scuola e nel tempo libero sto lavorando su:</p>
+
+                <!-- Lista puntata con i punti principali di apprendimento -->
                 <ul>
+                    <!-- Approfondimento dei linguaggi principali con pratica (esercizi/progetti) -->
                     <li>Approfondire C, C++ e Java con esercizi e piccoli progetti</li>
+
+                    <!-- Obiettivo: scrivere codice più ordinato e organizzato in moduli -->
                     <li>Capire come strutturare i programmi in modo pulito e modulare</li>
+
+                    <!-- Versionamento: usare Git/GitHub per tracciare modifiche e storico del codice -->
                     <li>Usare Git e GitHub per tenere traccia delle modifiche al codice</li>
+
+                    <!-- Prime basi dello sviluppo web -->
                     <li>Imparare le basi dello sviluppo web (HTML, CSS, JavaScript)</li>
                 </ul>
-                <p>Il mio obiettivo è costruire gradualmente progetti sempre più completi e complessi, mantenendo solide basi.</p>
+
+                <!-- Frase conclusiva: indica l'obiettivo di crescere in complessità mantenendo basi solide -->
+                <p>
+                Il mio obiettivo è costruire gradualmente progetti sempre più completi e complessi, mantenendo solide basi.
+                </p>
+
             </section>
+
 
             <!-- Linea orizzontale che separa visivamente le sezioni. La classe "section-divider" serve per stilizzarla via CSS (margini, colore, spessore, ecc.). -->
             <hr class="section-divider" />
@@ -223,219 +325,342 @@
                 <!-- Titolo principale della sezione -->
                 <h2>Progetti</h2>
 
-                <!-- C -->
+                <!-- Sezione progetti dedicata al linguaggio C -->
                 <div class="project-section">
+
+                    <!-- Titolo della sezione (linguaggio) -->
                     <h3>C</h3>
+
+                    <!-- Griglia che contiene le card dei progetti -->
                     <div class="project-grid">
+
+                        <!-- Card progetto: Anagrafe -->
                         <div class="project-card">
                             <h4>
-                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/Anagrafe.c" target="_blank"> Anagrafe </a>
+                                <!-- Titolo cliccabile del progetto: apre il file su GitHub in una nuova scheda -->
+                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/Anagrafe.c" target="_blank">Anagrafe</a>
                             </h4>
+
+                            <!-- Breve descrizione del progetto -->
                             <p>Programma in C per gestire l'anagrafe di persone.</p>
+
+                            <!-- Lista delle tecnologie/concetti usati nel progetto -->
                             <ul class="project-tech-list">
                                 <li>Uso di <strong>struct</strong> per rappresentare le persone</li>
                                 <li>Funzioni per inserire, cercare e visualizzare i dati</li>
                                 <li>Lettura e scrittura su <strong>file di testo</strong></li>
                             </ul>
-                            <!-- From Uiverse.io by Creatlydev -->
+
+                            <!-- Pulsante stile Uiverse: apre lo stesso link del progetto (file .c) -->
                             <button class="btn-github" type="button" onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/Anagrafe.c','_blank')">
+                                
+                                <!-- Icona GitHub -->
                                 <img src="/img/svg/github.svg" alt="GitHub logo" />
+                                
+                                <!-- Testo del bottone -->
                                 <span>Vedi codice</span>
                             </button>
                         </div>
 
+                        <!-- Card progetto: Tris -->
                         <div class="project-card">
                             <h4>
-                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/Tris.c" target="_blank"> Tris </a>
+
+                                <!-- Titolo cliccabile del progetto -->
+                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/Tris.c" target="_blank">Tris</a>
                             </h4>
+
+                            <!-- Descrizione del progetto -->
                             <p>Implementazione del gioco del Tris in C.</p>
+
+                            <!-- Dettagli/feature principali -->
                             <ul class="project-tech-list">
                                 <li>Gestione di una <strong>matrice 3x3</strong></li>
                                 <li>Controllo delle combinazioni vincenti</li>
                                 <li>Gestione del turno dei due giocatori</li>
                             </ul>
-                            <!-- From Uiverse.io by Creatlydev -->
-                            <button class="btn-github" type="button" onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/Tris.c','_blank')">
+
+                            <!-- Pulsante che apre il file su GitHub -->
+                            <button class="btn-github" type="button"
+                                onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/Tris.c','_blank')">
                                 <img src="/img/svg/github.svg" alt="GitHub logo" />
                                 <span>Vedi codice</span>
                             </button>
                         </div>
 
+                        <!-- Card progetto: Calcolatrice con file -->
                         <div class="project-card">
                             <h4>
-                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/calcolatrice2.c" target="_blank"> Calcolatrice con file </a>
+                                <!-- Titolo cliccabile del progetto -->
+                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/calcolatrice2.c" target="_blank">Calcolatrice con file</a>
                             </h4>
+
+                            <!-- Descrizione del progetto -->
                             <p>Calcolatrice che salva e legge i risultati da un file.</p>
+
+                            <!-- Punti tecnici del progetto -->
                             <ul class="project-tech-list">
                                 <li>Operazioni aritmetiche di base</li>
                                 <li>Lettura/scrittura su file</li>
                                 <li>Gestione dell'input dell'utente</li>
                             </ul>
-                            <!-- From Uiverse.io by Creatlydev -->
-                            <button class="btn-github" type="button" onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/calcolatrice2.c','_blank')">
-                                <img src="/img/svg/github.svg" alt="GitHub logo" />
-                                <span>Vedi codice</span>
+
+                            <!-- Pulsante che apre il file su GitHub -->
+                            <button class="btn-github" type="button" onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C/calcolatrice2.c','_blank')"><img src="/img/svg/github.svg" alt="GitHub logo" /><span>Vedi codice</span>
                             </button>
                         </div>
+
                     </div>
                 </div>
 
-                <!-- C++ -->
+                <!-- Sezione progetti dedicata al linguaggio C++ -->
                 <div class="project-section">
+
+                    <!-- Titolo della sezione (linguaggio) -->
                     <h3>C++</h3>
+
+                    <!-- Griglia che contiene le card dei progetti -->
                     <div class="project-grid">
+
+                        <!-- Card progetto: Rubrica contatti -->
                         <div class="project-card">
                             <h4>
-                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/contatti.cpp" target="_blank"> Rubrica contatti </a>
+                                <!-- Titolo cliccabile: apre il file su GitHub in una nuova scheda -->
+                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/contatti.cpp" target="_blank">Rubrica contatti</a>
                             </h4>
+
+                            <!-- Breve descrizione del progetto -->
                             <p>Semplice rubrica di contatti scritta in C++.</p>
+
+                            <!-- Lista di feature/concetti usati -->
                             <ul class="project-tech-list">
                                 <li>Gestione di una lista di contatti</li>
                                 <li>Uso di array e cicli</li>
                                 <li>Visualizzazione e modifica dei dati salvati</li>
                             </ul>
-                            <!-- From Uiverse.io by Creatlydev -->
-                            <button class="btn-github" type="button" onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/contatti.cpp','_blank')">
-                                <img src="/img/svg/github.svg" alt="GitHub logo" />
-                                <span>Vedi codice</span>
+
+                            <!-- Pulsante stile Uiverse: apre lo stesso link del file su GitHub -->
+                            <button class="btn-github" type="button" onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/contatti.cpp','_blank')"><img src="/img/svg/github.svg" alt="GitHub logo" /><span>Vedi codice</span>
                             </button>
                         </div>
 
+                        <!-- Card progetto: Media voti -->
                         <div class="project-card">
                             <h4>
-                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/media_voti.cpp" target="_blank"> Media voti </a>
+                                <!-- Titolo cliccabile: apre il file su GitHub -->
+                                <a class="project-title-link"
+                                href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/media_voti.cpp"
+                                target="_blank">
+                                Media voti
+                                </a>
                             </h4>
+
+                            <!-- Descrizione del progetto -->
                             <p>Calcolo della media dei voti degli studenti.</p>
+
+                            <!-- Concetti principali -->
                             <ul class="project-tech-list">
                                 <li>Uso di array per memorizzare i voti</li>
                                 <li>Cicli per sommare e calcolare la media</li>
                                 <li>Gestione di input multipli</li>
                             </ul>
-                            <button class="btn-github" type="button" onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/media_voti.cpp','_blank')">
-                                <img src="/img/svg/github.svg" alt="GitHub logo" />
-                                <span>Vedi codice</span>
+
+                            <!-- Pulsante: apre il file su GitHub -->
+                            <button class="btn-github" type="button" onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/media_voti.cpp','_blank')"><img src="/img/svg/github.svg" alt="GitHub logo" /><span>Vedi codice</span>
                             </button>
                         </div>
 
+                        <!-- Card progetto: Numero pari o dispari -->
                         <div class="project-card">
                             <h4>
-                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/pari_dispari.cpp" target="_blank"> Numero pari o dispari </a>
+                                <!-- Titolo cliccabile: apre il file su GitHub -->
+                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/pari_dispari.cpp" target="_blank">Numero pari o dispari</a>
                             </h4>
+
+                            <!-- Descrizione del progetto -->
                             <p>Programma che controlla se un numero è pari o dispari.</p>
+
+                            <!-- Punti tecnici principali -->
                             <ul class="project-tech-list">
                                 <li>Uso dell'operatore <strong>modulo (%)</strong></li>
                                 <li>Strutture condizionali <strong>if/else</strong></li>
                                 <li>Gestione di input numerici</li>
                             </ul>
-                            <button class="btn-github" type="button" onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/pari_dispari.cpp','_blank')">
-                                <img src="/img/svg/github.svg" alt="GitHub logo" />
-                                <span>Vedi codice</span>
+
+                            <!-- Pulsante: apre il file su GitHub -->
+                            <button class="btn-github" type="button" onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/pari_dispari.cpp','_blank')"> <img src="/img/svg/github.svg" alt="GitHub logo" /><span>Vedi codice</span>
                             </button>
                         </div>
 
+                        <!-- Card progetto: Gioco RPG in C++ -->
                         <div class="project-card">
                             <h4>
-                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/RPG.cpp" target="_blank"> Gioco RPG in C++ </a>
+                                <!-- Titolo cliccabile: apre il file su GitHub -->
+                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/RPG.cpp" target="_blank">Gioco RPG in C++</a>
                             </h4>
+
+                            <!-- Descrizione del progetto -->
                             <p>Piccolo gioco RPG testuale in C++ che gira da terminale, con combattimento a turni.</p>
+
+                            <!-- Concetti e meccaniche implementate -->
                             <ul class="project-tech-list">
                                 <li>Uso di <strong>struct</strong> per rappresentare i personaggi</li>
                                 <li>Funzioni per attacco, difesa e uso di pozioni</li>
                                 <li>Sistema di combattimento a turni con punti vita</li>
                             </ul>
-                            <button class="btn-github" type="button" onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/RPG.cpp','_blank')">
+
+                            <!-- Pulsante: apre il file su GitHub -->
+                            <button class="btn-github" type="button"
+                                    onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/C%2B%2B/RPG.cpp','_blank')">
                                 <img src="/img/svg/github.svg" alt="GitHub logo" />
                                 <span>Vedi codice</span>
                             </button>
                         </div>
+
                     </div>
                 </div>
 
-                <!-- Java -->
+
+                <!-- Sezione progetti dedicata al linguaggio Java -->
                 <div class="project-section">
+
+                    <!-- Titolo della sezione (linguaggio) -->
                     <h3>Java</h3>
+
+                    <!-- Griglia che contiene le card dei progetti -->
                     <div class="project-grid">
+
+                        <!-- Card progetto: Array -->
                         <div class="project-card">
                             <h4>
-                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/ArrayEsempio.java" target="_blank"> Array </a>
+                                <!-- Titolo cliccabile: apre il file su GitHub in una nuova scheda -->
+                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/ArrayEsempio.java" target="_blank">Array</a>
                             </h4>
+
+                            <!-- Breve descrizione del progetto -->
                             <p>Esempio di gestione base di array in Java.</p>
+
+                            <!-- Lista delle tecnologie/concetti usati -->
                             <ul class="project-tech-list">
                                 <li>Uso di array e cicli <strong>for</strong></li>
                                 <li>Accesso e stampa degli elementi</li>
                                 <li>Sintassi base di Java</li>
                             </ul>
-                            <!-- From Uiverse.io by Creatlydev -->
-                            <button class="btn-github" type="button" onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/ArrayEsempio.java','_blank')">
-                                <img src="/img/svg/github.svg" alt="GitHub logo" />
-                                <span>Vedi codice</span>
-                            </button>
-                        </div>
 
-                        <div class="project-card">
+                            <!-- Pulsante stile Uiverse: apre lo stesso link del file Java -->
+                            <button class="btn-github" type="button"onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/ArrayEsempio.java','_blank')"><img src="/img/svg/github.svg" alt="GitHub logo" /><span>Vedi codice</span>
+                            </button>
+                            </div>
+
+                            <!-- Card progetto: Numero intero -->
+                            <div class="project-card">
                             <h4>
-                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/NumeroIntero.java" target="_blank"> Numero intero </a>
+                                <!-- Titolo cliccabile: apre il file su GitHub -->
+                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/NumeroIntero.java" target="_blank">Numero intero</a>
                             </h4>
+
+                            <!-- Descrizione del progetto -->
                             <p>Classe Java per rappresentare un numero intero.</p>
+
+                            <!-- Concetti principali -->
                             <ul class="project-tech-list">
                                 <li>Definizione di una classe con attributi</li>
                                 <li>Metodi per leggere e modificare il valore</li>
                                 <li>Introduzione all'<strong>OOP</strong> in Java</li>
                             </ul>
-                            <!-- From Uiverse.io by Creatlydev -->
-                            <button class="btn-github" type="button" onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/NumeroIntero.java','_blank')">
-                                <img src="/img/svg/github.svg" alt="GitHub logo" />
-                                <span>Vedi codice</span>
+
+                            <!-- Pulsante: apre il file su GitHub -->
+                            <button class="btn-github" type="button" onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/NumeroIntero.java','_blank')"><img src="/img/svg/github.svg" alt="GitHub logo" /><span>Vedi codice</span>
                             </button>
                         </div>
 
+                        <!-- Card progetto: Persona -->
                         <div class="project-card">
                             <h4>
-                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/Persona.java" target="_blank"> Persona </a>
+                                <!-- Titolo cliccabile: apre il file su GitHub -->
+                                <a class="project-title-link" href="https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/Persona.java" target="_blank">Persona</a>
                             </h4>
+
+                            <!-- Descrizione del progetto: evidenzia il nome della classe con <code> -->
                             <p>Classe <code>Persona</code> con attributi e metodi.</p>
+
+                            <!-- Punti tecnici principali -->
                             <ul class="project-tech-list">
+                                <!-- Nota: qui intendi "incapsulamento" (encapsulation), non "incastellamento" -->
                                 <li>Incastellamento dei dati (nome, età, ecc.)</li>
                                 <li>Metodi per leggere e modificare i campi</li>
                                 <li>Uso di oggetti in Java</li>
                             </ul>
-                            <!-- From Uiverse.io by Creatlydev -->
-                            <button class="btn-github" type="button" onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/Persona.java','_blank')">
-                                <img src="/img/svg/github.svg" alt="GitHub logo" />
-                                <span>Vedi codice</span>
+
+                            <!-- Pulsante: apre il file su GitHub -->
+                            <button class="btn-github" type="button" onclick="window.open('https://github.com/Pietro-Granda/Pietro-Granda.github.io/blob/main/Java/Persona.java','_blank')"><img src="/img/svg/github.svg" alt="GitHub logo" /><span>Vedi codice</span>
                             </button>
                         </div>
+
                     </div>
                 </div>
+
+            <!-- Chiusura della sezione principale "Projects" (o della sezione che contiene queste project-section) -->
             </section>
 
+
+            <!-- Linea orizzontale usata come separatore visivo tra sezioni -->
             <hr class="section-divider" />
 
+            <!-- Sezione "Contatti": contiene testo introduttivo + form per inviare un messaggio -->
             <section id="contact" class="contact">
+
+                <!-- Titolo della sezione -->
                 <h2>Contatti</h2>
+
+                <!-- Testo introduttivo per invitare a scrivere -->
                 <p>Se vuoi contattarmi per collaborazioni, progetti o domande:</p>
 
+                <!-- Form di contatto (id usato di solito dal JavaScript per gestire invio e validazione) -->
                 <form class="contact-form" id="contactForm">
+
+                    <!-- Riga del form: campo nome -->
                     <div class="form-row">
+                        <!-- Campo testo obbligatorio -->
                         <input type="text" name="name" placeholder="Il tuo nome" required />
                     </div>
+
+                    <!-- Riga del form: campo email -->
                     <div class="form-row">
+                        <!-- Campo email obbligatorio: il browser verifica formato email -->
                         <input type="email" name="email" placeholder="La tua email" required />
                     </div>
+
+                    <!-- Riga del form: messaggio -->
                     <div class="form-row">
+                        <!-- Area di testo obbligatoria -->
                         <textarea name="message" rows="4" placeholder="Il tuo messaggio" required></textarea>
                     </div>
+
+                    <!-- Bottone di invio del form -->
                     <button type="submit" class="btn form-btn">Invia</button>
                 </form>
+
+                <!-- Paragrafo vuoto dove mostrare feedback (es. "Messaggio inviato" / "Errore") -->
                 <p class="contact-feedback" id="contactFeedback"></p>
             </section>
-        </main>
-        <button class="back-to-top" id="backToTop"><img src="/img/svg/arrow.svg" alt="" /></button>
 
+        <!-- Chiusura del contenuto principale della pagina -->
+        </main>
+
+        <!-- Pulsante "torna su": di solito appare quando scrolli e porta in alto la pagina -->
+        <button class="back-to-top" id="backToTop"><img src="/img/svg/arrow.svg" alt="" />
+        </button>
+
+        <!-- Footer del sito -->
         <footer>
+            <!-- Copyright -->
             <p>© 2025 Pietro Granda Boscarato - Tutti i diritti riservati</p>
         </footer>
 
+        <!-- Collegamento al file JavaScript principale (defer = esegue dopo che l'HTML è stato parsato) -->
         <script src="/js/javascript.js" defer></script>
+
+    <!-- Chiusura body e documento HTML -->
     </body>
 </html>

@@ -1,0 +1,49 @@
+.header {
+    background: linear-gradient(120deg, #0874f7, #8a00c4);
+    background-size: 200% 200%;
+    animation: headerGradient 12s cubic-bezier(0.08, 0.82, 0.17, 1) infinite;
+}
+
+@keyframes headerGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.header > * {
+    position: relative;
+    z-index: 0;
+}
+
+.floating-shapes {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+    font-weight: 900;
+}
+
+.floating-shapes .shape {
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.6;
+    will-change: transform;
+    user-select: none;
+}
